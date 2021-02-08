@@ -1,0 +1,6 @@
+id,task,framework,constraint,fold,result,metric,mode,version,params,app_version,utc,duration,training_duration,predict_duration,models_count,seed,info,acc,balacc,logloss
+openml.org/t/7593,Covertype,autosklearn,1h12c,0,0.308506,logloss,local,0.12.1,,"dev [master, 54881a2]",2021-02-01T22:03:42,3772.5,3611.5,43.5,3,1602029633,,0.880624,0.85539,0.308506
+openml.org/t/7593,Covertype,autosklearn,1h12c,1,0.205479,logloss,local,0.12.1,,"dev [master, 54881a2]",2021-02-01T23:05:49,3726.5,3613.2,20.4,2,1602029634,,0.930519,0.94292,0.205479
+openml.org/t/7593,Covertype,autosklearn,1h12c,2,0.279611,logloss,local,0.12.1,,"dev [master, 54881a2]",2021-02-02T00:08:21,3752.6,3615.7,31.8,3,1602029635,,0.899365,0.923612,0.279611
+openml.org/t/7593,Covertype,autosklearn,1h12c,3,0.26476,logloss,local,0.12.1,,"dev [master, 54881a2]",2021-02-02T01:10:56,3754.7,3612.9,34.2,3,1602029636,,0.903444,0.935318,0.26476
+openml.org/t/7593,Covertype,autosklearn,1h12c,4,0.227628,logloss,local,0.12.1,,"dev [master, 54881a2]",2021-02-02T02:13:08,3731.6,3612.6,22.8,3,1602029637,,0.912635,0.90453,0.227628

@@ -1,0 +1,39 @@
+.git
+
+# generated files/folders
+.ipynb_checkpoints
+logs
+results
+**/logs
+**/models
+**/predictions
+**/scores
+**/lib
+**/.marker*
+**/__pycache__
+**/venv
+
+# editors/IDEs
+.idea
+*.iml
+**/*.swp
+**/*.ipynb
+
+# tmp files
+**/*.log
+**/*.csv
+**/*.arff
+
+# custom files
+my_*
+.my_*
+
+# binary files
+**/*.whl
+**/*.jar
+**/*.zip
+**/*.tar
+**/*.tgz
+**/*.gz
+**/*.bz2
+**/*.png

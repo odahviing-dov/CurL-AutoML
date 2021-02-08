@@ -1,0 +1,205 @@
+[INFO] [amlb:16:18:23.324] Running `autosklearn` on `test` benchmarks in `local` mode.
+[INFO] [amlb.frameworks.definitions:16:18:23.399] Loading frameworks definitions from /home/administrator/nil/automlbenchmark/resources/frameworks.yaml.
+[INFO] [amlb.resources:16:18:23.513] Loading benchmark constraint definitions from /home/administrator/nil/automlbenchmark/resources/constraints.yaml.
+[INFO] [amlb.benchmarks.file:16:18:23.519] Loading benchmark definitions from /home/administrator/nil/automlbenchmark/resources/benchmarks/test.yaml.
+[INFO] [amlb.job:16:18:23.529] 
+-----------------------------------------------
+Starting job local.test.test.kc2.0.autosklearn.
+[INFO] [amlb.utils.process:16:18:23.529] [400573] CPU Utilization: 16.3%
+[INFO] [amlb.utils.process:16:18:23.530] [400573] Memory Usage: 11.3%
+[INFO] [amlb.utils.process:16:18:23.530] [400573] Disk Usage: 53.7%
+[INFO] [amlb.benchmark:16:18:23.544] Assigning 2 cores (total=12) for new task kc2.
+[INFO] [amlb.benchmark:16:18:23.544] Assigning 55026 MB (total=64324 MB) for new kc2 task.
+[INFO] [amlb.benchmark:16:18:23.545] Running task kc2 on framework autosklearn with config:
+TaskConfig(framework='autosklearn', framework_params={}, framework_version='stable', type='classification', name='kc2', fold=0, metrics=['auc', 'logloss', 'acc', 'balacc'], metric='auc', seed=1331993514, max_runtime_seconds=60, cores=2, max_mem_size_mb=55026, min_vol_size_mb=-1, input_dir='/home/administrator/.openml/cache', output_dir='/home/administrator/nil/automlbenchmark/results/autosklearn.test.test.local.20210126T161823', output_predictions_file='/home/administrator/nil/automlbenchmark/results/autosklearn.test.test.local.20210126T161823/predictions/kc2/0/predictions.csv', ext={}, output_metadata_file='/home/administrator/nil/automlbenchmark/results/autosklearn.test.test.local.20210126T161823/predictions/kc2/0/metadata.json')
+[INFO] [amlb.utils.process:16:18:23.569] Running cmd `/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin/python -W ignore /home/administrator/nil/automlbenchmark/frameworks/autosklearn/exec.py`
+[INFO] [amlb.print:16:18:25.392] INFO:__main__:
+[INFO] [amlb.print:16:18:25.393] **** Auto-sklearn [v0.12.1]****
+[INFO] [amlb.print:16:18:25.393] 
+[INFO] [amlb.print:16:18:25.393] INFO:__main__:Running Auto-sklearn for kc2 with a maximum time of 60s on 2 cores with 55026MB, optimizing roc_auc.
+[INFO] [amlb.print:16:18:25.393] INFO:__main__:Environment: environ({'AMLB_PATH': '/home/administrator/nil/automlbenchmark/amlb', 'PATH': '/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin:/home/administrator/.local/bin:/home/administrator/anaconda3/bin:/home/administrator/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PWD': '/home/administrator/nil/automlbenchmark', 'PYTHONPATH': '/home/administrator/nil/automlbenchmark', 'LC_CTYPE': 'C.UTF-8', 'JOBLIB_TEMP_FOLDER': '/tmp', 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1', 'KMP_INIT_AT_FORK': 'FALSE', 'KMP_DUPLICATE_LIB_OK': 'True'})
+[INFO] [amlb.print:16:18:25.393] INFO:__main__:Using 27513.0MB memory per job and on a total of 2 jobs.
+[INFO] [amlb.print:16:18:25.419] { 'predictors_type': [ 'Numerical',
+[INFO] [amlb.print:16:18:33.388]                        'Numerical',
+[INFO] [amlb.print:16:18:33.388]                        'Numerical',
+[INFO] [amlb.print:16:18:33.389]                        'Numerical',
+[INFO] [amlb.print:16:18:33.389]                        'Numerical',
+[INFO] [amlb.print:16:18:33.389]                        'Numerical',
+[INFO] [amlb.print:16:18:33.389]                        'Numerical',
+[INFO] [amlb.print:16:18:33.389]                        'Numerical',
+[INFO] [amlb.print:16:18:33.389]                        'Numerical',
+[INFO] [amlb.print:16:18:33.390]                        'Numerical',
+[INFO] [amlb.print:16:18:33.390]                        'Numerical',
+[INFO] [amlb.print:16:18:33.390]                        'Numerical',
+[INFO] [amlb.print:16:18:33.390]                        'Numerical',
+[INFO] [amlb.print:16:18:33.390]                        'Numerical',
+[INFO] [amlb.print:16:18:33.390]                        'Numerical',
+[INFO] [amlb.print:16:18:33.390]                        'Numerical',
+[INFO] [amlb.print:16:18:33.391]                        'Numerical',
+[INFO] [amlb.print:16:18:33.391]                        'Numerical',
+[INFO] [amlb.print:16:18:33.391]                        'Numerical',
+[INFO] [amlb.print:16:18:33.391]                        'Numerical',
+[INFO] [amlb.print:16:18:33.391]                        'Numerical'],
+[INFO] [amlb.print:16:18:33.391]   'test': { 'X_enc': '/tmp/tmp0qh7kyep/test.X_enc.npy',
+[INFO] [amlb.print:16:18:33.392]             'y_enc': '/tmp/tmp0qh7kyep/test.y_enc.npy'},
+[INFO] [amlb.print:16:18:33.392]   'train': { 'X_enc': '/tmp/tmp0qh7kyep/train.X_enc.npy',
+[INFO] [amlb.print:16:18:33.392]              'y_enc': '/tmp/tmp0qh7kyep/train.y_enc.npy'}}
+[INFO] [amlb.print:16:18:33.392] [WARNING] [2021-01-26 16:18:33,366:Client-AutoMLSMBO(1331993514)::kc2] Dataset kc2 already in meta-data. Removing occurence.
+[INFO] [amlb.print:16:18:33.429] [WARNING] [2021-01-26 16:18:33,407:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance abalone
+[INFO] [amlb.print:16:18:33.429] [WARNING] [2021-01-26 16:18:33,408:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance amazon-commerce-reviews
+[INFO] [amlb.print:16:18:33.429] [WARNING] [2021-01-26 16:18:33,408:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance analcatdata_authorship
+[INFO] [amlb.print:16:18:33.429] [WARNING] [2021-01-26 16:18:33,408:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance analcatdata_dmft
+[INFO] [amlb.print:16:18:33.429] [WARNING] [2021-01-26 16:18:33,409:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance anneal
+[INFO] [amlb.print:16:18:33.430] [WARNING] [2021-01-26 16:18:33,409:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance artificial-characters
+[INFO] [amlb.print:16:18:33.430] [WARNING] [2021-01-26 16:18:33,410:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance autouniv-au6-750
+[INFO] [amlb.print:16:18:33.430] [WARNING] [2021-01-26 16:18:33,410:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance autouniv-au7-1100
+[INFO] [amlb.print:16:18:33.430] [WARNING] [2021-01-26 16:18:33,410:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance autouniv-au7-700
+[INFO] [amlb.print:16:18:33.430] [WARNING] [2021-01-26 16:18:33,411:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance bachchoralharmony
+[INFO] [amlb.print:16:18:33.430] [WARNING] [2021-01-26 16:18:33,411:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance balance-scale
+[INFO] [amlb.print:16:18:33.431] [WARNING] [2021-01-26 16:18:33,411:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance baseball
+[INFO] [amlb.print:16:18:33.431] [WARNING] [2021-01-26 16:18:33,412:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance cardiotocography
+[INFO] [amlb.print:16:18:33.431] [WARNING] [2021-01-26 16:18:33,413:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance cifar_10
+[INFO] [amlb.print:16:18:33.431] [WARNING] [2021-01-26 16:18:33,413:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance cjs
+[INFO] [amlb.print:16:18:33.431] [WARNING] [2021-01-26 16:18:33,413:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance cmc
+[INFO] [amlb.print:16:18:33.431] [WARNING] [2021-01-26 16:18:33,414:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance collins
+[INFO] [amlb.print:16:18:33.431] [WARNING] [2021-01-26 16:18:33,415:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance devnagari-script
+[INFO] [amlb.print:16:18:33.432] [WARNING] [2021-01-26 16:18:33,415:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance diabetes130us
+[INFO] [amlb.print:16:18:33.432] [WARNING] [2021-01-26 16:18:33,416:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance dna
+[INFO] [amlb.print:16:18:33.432] [WARNING] [2021-01-26 16:18:33,416:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance eating
+[INFO] [amlb.print:16:18:33.432] [WARNING] [2021-01-26 16:18:33,417:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance eucalyptus
+[INFO] [amlb.print:16:18:33.432] [WARNING] [2021-01-26 16:18:33,417:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance eye_movements
+[INFO] [amlb.print:16:18:33.432] [WARNING] [2021-01-26 16:18:33,417:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance fars
+[INFO] [amlb.print:16:18:33.432] [WARNING] [2021-01-26 16:18:33,418:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance first-order-theorem-proving
+[INFO] [amlb.print:16:18:33.433] [WARNING] [2021-01-26 16:18:33,420:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance gesturephasesegmentationprocessed
+[INFO] [amlb.print:16:18:33.433] [WARNING] [2021-01-26 16:18:33,420:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance gtsrb-hog01
+[INFO] [amlb.print:16:18:33.433] [WARNING] [2021-01-26 16:18:33,421:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance gtsrb-hog02
+[INFO] [amlb.print:16:18:33.433] [WARNING] [2021-01-26 16:18:33,421:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance gtsrb-hog03
+[INFO] [amlb.print:16:18:33.433] [WARNING] [2021-01-26 16:18:33,421:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance gtsrb-huehist
+[INFO] [amlb.print:16:18:33.433] [WARNING] [2021-01-26 16:18:33,421:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance har
+[INFO] [amlb.print:16:18:33.434] [WARNING] [2021-01-26 16:18:33,422:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance hypothyroid
+[INFO] [amlb.print:16:18:33.434] [WARNING] [2021-01-26 16:18:33,423:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance indian_pines
+[INFO] [amlb.print:16:18:33.434] [WARNING] [2021-01-26 16:18:33,423:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance isolet
+[INFO] [amlb.print:16:18:33.434] [WARNING] [2021-01-26 16:18:33,423:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance japanesevowels
+[INFO] [amlb.print:16:18:33.434] [WARNING] [2021-01-26 16:18:33,424:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance kr-vs-k
+[INFO] [amlb.print:16:18:33.434] [WARNING] [2021-01-26 16:18:33,425:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance kropt
+[INFO] [amlb.print:16:18:33.434] [WARNING] [2021-01-26 16:18:33,425:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance kuzushiji-49
+[INFO] [amlb.print:16:18:33.435] [WARNING] [2021-01-26 16:18:33,425:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance kuzushiji-mnist
+[INFO] [amlb.print:16:18:33.435] [WARNING] [2021-01-26 16:18:33,425:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance ldpa
+[INFO] [amlb.print:16:18:33.435] [WARNING] [2021-01-26 16:18:33,426:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance led-display-domain-7digit
+[INFO] [amlb.print:16:18:33.435] [WARNING] [2021-01-26 16:18:33,426:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance led24
+[INFO] [amlb.print:16:18:33.435] [WARNING] [2021-01-26 16:18:33,426:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance letter
+[INFO] [amlb.print:16:18:33.435] [WARNING] [2021-01-26 16:18:33,427:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance meta_stream_intervals.arff
+[INFO] [amlb.print:16:18:33.435] [WARNING] [2021-01-26 16:18:33,427:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance miceprotein
+[INFO] [amlb.print:16:18:33.436] [WARNING] [2021-01-26 16:18:33,428:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance micro-mass
+[INFO] [amlb.print:16:18:33.437] [WARNING] [2021-01-26 16:18:33,428:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance microaggregation2
+[INFO] [amlb.print:16:18:33.437] [WARNING] [2021-01-26 16:18:33,428:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance mnist_784
+[INFO] [amlb.print:16:18:33.437] [WARNING] [2021-01-26 16:18:33,430:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance nursery
+[INFO] [amlb.print:16:18:33.438] [WARNING] [2021-01-26 16:18:33,431:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance one-hundred-plants-margin
+[INFO] [amlb.print:16:18:33.438] [WARNING] [2021-01-26 16:18:33,431:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance optdigits
+[INFO] [amlb.print:16:18:33.438] [WARNING] [2021-01-26 16:18:33,433:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance page-blocks
+[INFO] [amlb.print:16:18:33.438] [WARNING] [2021-01-26 16:18:33,434:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance pendigits
+[INFO] [amlb.print:16:18:33.438] [WARNING] [2021-01-26 16:18:33,437:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance pokerhand
+[INFO] [amlb.print:16:18:33.480] [WARNING] [2021-01-26 16:18:33,439:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance satimage
+[INFO] [amlb.print:16:18:33.480] [WARNING] [2021-01-26 16:18:33,439:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance semeion
+[INFO] [amlb.print:16:18:33.480] [WARNING] [2021-01-26 16:18:33,440:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance soybean
+[INFO] [amlb.print:16:18:33.480] [WARNING] [2021-01-26 16:18:33,441:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance splice
+[INFO] [amlb.print:16:18:33.480] [WARNING] [2021-01-26 16:18:33,441:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance spoken-arabic-digit
+[INFO] [amlb.print:16:18:33.481] [WARNING] [2021-01-26 16:18:33,442:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance svhn
+[INFO] [amlb.print:16:18:33.481] [WARNING] [2021-01-26 16:18:33,442:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance synthetic_control
+[INFO] [amlb.print:16:18:33.481] [WARNING] [2021-01-26 16:18:33,443:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance tamilnadu-electricity
+[INFO] [amlb.print:16:18:33.481] [WARNING] [2021-01-26 16:18:33,443:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance texture
+[INFO] [amlb.print:16:18:33.481] [WARNING] [2021-01-26 16:18:33,444:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance traffic_violations
+[INFO] [amlb.print:16:18:33.481] [WARNING] [2021-01-26 16:18:33,444:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance umist_faces_cropped
+[INFO] [amlb.print:16:18:33.481] [WARNING] [2021-01-26 16:18:33,445:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance usps
+[INFO] [amlb.print:16:18:33.482] [WARNING] [2021-01-26 16:18:33,445:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-a2
+[INFO] [amlb.print:16:18:33.482] [WARNING] [2021-01-26 16:18:33,446:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-a3
+[INFO] [amlb.print:16:18:33.482] [WARNING] [2021-01-26 16:18:33,446:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-a4
+[INFO] [amlb.print:16:18:33.482] [WARNING] [2021-01-26 16:18:33,446:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-b1
+[INFO] [amlb.print:16:18:33.524] [WARNING] [2021-01-26 16:18:33,447:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-b2
+[INFO] [amlb.print:16:18:33.524] [WARNING] [2021-01-26 16:18:33,447:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-b5
+[INFO] [amlb.print:16:18:33.524] [WARNING] [2021-01-26 16:18:33,447:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-b6
+[INFO] [amlb.print:16:18:33.524] [WARNING] [2021-01-26 16:18:33,448:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-d1
+[INFO] [amlb.print:16:18:33.524] [WARNING] [2021-01-26 16:18:33,448:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-d4
+[INFO] [amlb.print:16:18:33.524] [WARNING] [2021-01-26 16:18:33,448:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance volcanoes-e1
+[INFO] [amlb.print:16:18:33.525] [WARNING] [2021-01-26 16:18:33,449:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance vowel
+[INFO] [amlb.print:16:18:33.525] [WARNING] [2021-01-26 16:18:33,517:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance walking-activity
+[INFO] [amlb.print:16:18:33.680] [WARNING] [2021-01-26 16:18:33,518:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance wall-robot-navigation
+[INFO] [amlb.print:16:18:33.680] [WARNING] [2021-01-26 16:18:33,518:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance waveform-5000
+[INFO] [amlb.print:16:18:33.680] [WARNING] [2021-01-26 16:18:33,519:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance wine-quality-red
+[INFO] [amlb.print:16:18:33.680] [WARNING] [2021-01-26 16:18:33,519:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance wine-quality-white
+[INFO] [amlb.print:16:18:33.681] [WARNING] [2021-01-26 16:18:33,520:Client-AutoMLSMBO(1331993514)::kc2] Could not find runs for instance yeast
+[INFO] [amlb.print:16:18:33.681] [WARNING] [2021-01-26 16:18:33,679:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance baseball
+[INFO] [amlb.print:16:18:33.684] [WARNING] [2021-01-26 16:18:33,679:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance balance-scale
+[INFO] [amlb.print:16:18:33.685] [WARNING] [2021-01-26 16:18:33,679:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance cmc
+[INFO] [amlb.print:16:18:33.685] [WARNING] [2021-01-26 16:18:33,679:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance autouniv-au7-700
+[INFO] [amlb.print:16:18:33.685] [WARNING] [2021-01-26 16:18:33,679:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance dna
+[INFO] [amlb.print:16:18:33.685] [WARNING] [2021-01-26 16:18:33,680:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance splice
+[INFO] [amlb.print:16:18:33.685] [WARNING] [2021-01-26 16:18:33,680:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-a3
+[INFO] [amlb.print:16:18:33.685] [WARNING] [2021-01-26 16:18:33,680:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-e1
+[INFO] [amlb.print:16:18:33.686] [WARNING] [2021-01-26 16:18:33,680:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-a4
+[INFO] [amlb.print:16:18:33.686] [WARNING] [2021-01-26 16:18:33,680:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance analcatdata_authorship
+[INFO] [amlb.print:16:18:33.686] [WARNING] [2021-01-26 16:18:33,680:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-a2
+[INFO] [amlb.print:16:18:33.686] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance wall-robot-navigation
+[INFO] [amlb.print:16:18:33.686] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance wine-quality-red
+[INFO] [amlb.print:16:18:33.686] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance eye_movements
+[INFO] [amlb.print:16:18:33.686] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance autouniv-au7-1100
+[INFO] [amlb.print:16:18:33.687] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance waveform-5000
+[INFO] [amlb.print:16:18:33.687] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance page-blocks
+[INFO] [amlb.print:16:18:33.687] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance microaggregation2
+[INFO] [amlb.print:16:18:33.687] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance first-order-theorem-proving
+[INFO] [amlb.print:16:18:33.687] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-d4
+[INFO] [amlb.print:16:18:33.687] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-d1
+[INFO] [amlb.print:16:18:33.687] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance wine-quality-white
+[INFO] [amlb.print:16:18:33.687] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance synthetic_control
+[INFO] [amlb.print:16:18:33.688] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance eucalyptus
+[INFO] [amlb.print:16:18:33.688] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance gesturephasesegmentationprocessed
+[INFO] [amlb.print:16:18:33.688] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance cardiotocography
+[INFO] [amlb.print:16:18:33.688] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-b5
+[INFO] [amlb.print:16:18:33.688] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-b1
+[INFO] [amlb.print:16:18:33.688] [WARNING] [2021-01-26 16:18:33,681:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-b6
+[INFO] [amlb.print:16:18:33.688] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance yeast
+[INFO] [amlb.print:16:18:33.689] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance analcatdata_dmft
+[INFO] [amlb.print:16:18:33.689] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance volcanoes-b2
+[INFO] [amlb.print:16:18:33.689] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance autouniv-au6-750
+[INFO] [amlb.print:16:18:33.689] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance indian_pines
+[INFO] [amlb.print:16:18:33.689] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance satimage
+[INFO] [amlb.print:16:18:33.689] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance nursery
+[INFO] [amlb.print:16:18:33.689] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance led-display-domain-7digit
+[INFO] [amlb.print:16:18:33.689] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance vowel
+[INFO] [amlb.print:16:18:33.690] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance har
+[INFO] [amlb.print:16:18:33.690] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance hypothyroid
+[INFO] [amlb.print:16:18:33.690] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance led24
+[INFO] [amlb.print:16:18:33.690] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance usps
+[INFO] [amlb.print:16:18:33.690] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance meta_stream_intervals.arff
+[INFO] [amlb.print:16:18:33.690] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance texture
+[INFO] [amlb.print:16:18:33.690] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance semeion
+[INFO] [amlb.print:16:18:33.691] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance optdigits
+[INFO] [amlb.print:16:18:33.691] [WARNING] [2021-01-26 16:18:33,682:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance japanesevowels
+[INFO] [amlb.print:16:18:33.691] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance collins
+[INFO] [amlb.print:16:18:33.691] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance fars
+[INFO] [amlb.print:16:18:33.691] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance pendigits
+[INFO] [amlb.print:16:18:33.691] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance artificial-characters
+[INFO] [amlb.print:16:18:33.691] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance abalone
+[INFO] [amlb.print:16:18:33.691] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance kuzushiji-mnist
+[INFO] [amlb.print:16:18:33.692] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance isolet
+[INFO] [amlb.print:16:18:33.692] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance anneal
+[INFO] [amlb.print:16:18:33.692] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance kropt
+[INFO] [amlb.print:16:18:33.692] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance kr-vs-k
+[INFO] [amlb.print:16:18:33.692] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance letter
+[INFO] [amlb.print:16:18:33.692] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance micro-mass
+[INFO] [amlb.print:16:18:33.692] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance svhn
+[INFO] [amlb.print:16:18:33.693] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance cifar_10
+[INFO] [amlb.print:16:18:33.693] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance ldpa
+[INFO] [amlb.print:16:18:33.693] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance gtsrb-huehist
+[INFO] [amlb.print:16:18:33.693] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance one-hundred-plants-margin
+[INFO] [amlb.print:16:18:33.693] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance bachchoralharmony
+[INFO] [amlb.print:16:18:33.693] [WARNING] [2021-01-26 16:18:33,683:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance miceprotein
+[INFO] [amlb.print:16:18:33.693] [WARNING] [2021-01-26 16:18:33,684:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance spoken-arabic-digit
+[INFO] [amlb.print:16:18:33.693] [WARNING] [2021-01-26 16:18:33,684:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance soybean
+[INFO] [amlb.print:16:18:33.694] [WARNING] [2021-01-26 16:18:33,684:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance gtsrb-hog01
+[INFO] [amlb.print:16:18:33.694] [WARNING] [2021-01-26 16:18:33,684:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance gtsrb-hog02
+[INFO] [amlb.print:16:18:33.694] [WARNING] [2021-01-26 16:18:33,684:Client-AutoMLSMBO(1331993514)::kc2] Found no best configuration for instance traffic_violations
+[INFO] [amlb.utils.process:16:18:45.292] [400573] CPU Utilization: 13.4%
+[INFO] [amlb.utils.process:16:18:45.293] [400573] Memory Usage: 12.0%
+[INFO] [amlb.utils.process:16:18:45.293] [400573] Disk Usage: 53.7%
+[INFO] [amlb.benchmark:16:18:45.293] Processing results for autosklearn.test.test.local.20210126T161823

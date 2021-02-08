@@ -1,0 +1,1191 @@
+[INFO] [amlb:03:54:48.849] Running `autosklearn` on `covertype` benchmarks in `local` mode.
+[INFO] [amlb.frameworks.definitions:03:54:48.895] Loading frameworks definitions from /home/administrator/nil/automlbenchmark/resources/frameworks.yaml.
+[INFO] [amlb.resources:03:54:49.012] Loading benchmark constraint definitions from /home/administrator/nil/automlbenchmark/resources/constraints.yaml.
+[INFO] [amlb.benchmarks.file:03:54:49.018] Loading benchmark definitions from /home/administrator/nil/automlbenchmark/resources/benchmarks/covertype.yaml.
+[INFO] [amlb.job:03:54:49.022] 
+-----------------------------------------------------------
+Starting job local.covertype.1h12c.Covertype.0.autosklearn.
+[INFO] [amlb.utils.process:03:54:49.023] [513063] CPU Utilization: 14.0%
+[INFO] [amlb.utils.process:03:54:49.023] [513063] Memory Usage: 6.3%
+[INFO] [amlb.utils.process:03:54:49.024] [513063] Disk Usage: 65.0%
+[INFO] [amlb.benchmark:03:54:50.182] Assigning 12 cores (total=12) for new task Covertype.
+[INFO] [amlb.benchmark:03:54:50.182] Assigning 58199 MB (total=64324 MB) for new Covertype task.
+[INFO] [amlb.benchmark:03:54:50.185] Running task Covertype on framework autosklearn with config:
+TaskConfig(framework='autosklearn', framework_params={}, framework_version='stable', type='classification', name='Covertype', fold=0, metrics=['logloss', 'acc', 'balacc'], metric='logloss', seed=535651437, max_runtime_seconds=3600, cores=12, max_mem_size_mb=58199, min_vol_size_mb=16384, input_dir='/home/administrator/.openml/cache', output_dir='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448', output_predictions_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/0/predictions.csv', ext={}, output_metadata_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/0/metadata.json')
+[INFO] [amlb.utils.process:03:55:56.782] Running cmd `/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin/python -W ignore /home/administrator/nil/automlbenchmark/frameworks/autosklearn/exec.py`
+[INFO] [amlb.print:03:55:58.800] INFO:__main__:
+[INFO] [amlb.print:03:55:58.801] **** Auto-sklearn [v0.12.1]****
+[INFO] [amlb.print:03:55:58.801] 
+[INFO] [amlb.print:03:55:58.801] INFO:__main__:Running Auto-sklearn for Covertype with a maximum time of 3600s on 12 cores with 58199MB, optimizing log_loss.
+[INFO] [amlb.print:03:55:58.801] INFO:__main__:Environment: environ({'AMLB_PATH': '/home/administrator/nil/automlbenchmark/amlb', 'PATH': '/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin:/home/administrator/.local/bin:/home/administrator/anaconda3/bin:/home/administrator/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PWD': '/home/administrator/nil/automlbenchmark', 'PYTHONPATH': '/home/administrator/nil/automlbenchmark', 'LC_CTYPE': 'C.UTF-8', 'JOBLIB_TEMP_FOLDER': '/tmp', 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1', 'KMP_INIT_AT_FORK': 'FALSE', 'KMP_DUPLICATE_LIB_OK': 'True'})
+[INFO] [amlb.print:03:55:58.802] INFO:__main__:Using 4849.916666666667MB memory per job and on a total of 12 jobs.
+[INFO] [amlb.print:03:55:58.802] WARNING:__main__:Using meta-learned initialization, which might be bad (leakage).
+[INFO] [amlb.print:03:55:58.802] INFO:__main__:Auto-sklearn constructor arguments: {'metric': log_loss, 'time_left_for_this_task': 3600, 'n_jobs': 12, 'seed': 535651437}
+[INFO] [amlb.print:03:55:58.892] { 'predictors_type': [ 'Numerical',
+[INFO] [amlb.print:03:56:14.884]                        'Numerical',
+[INFO] [amlb.print:03:56:14.885]                        'Numerical',
+[INFO] [amlb.print:03:56:14.885]                        'Numerical',
+[INFO] [amlb.print:03:56:14.885]                        'Numerical',
+[INFO] [amlb.print:03:56:14.885]                        'Numerical',
+[INFO] [amlb.print:03:56:14.885]                        'Numerical',
+[INFO] [amlb.print:03:56:14.885]                        'Numerical',
+[INFO] [amlb.print:03:56:14.886]                        'Numerical',
+[INFO] [amlb.print:03:56:14.886]                        'Numerical',
+[INFO] [amlb.print:03:56:14.886]                        'Categorical',
+[INFO] [amlb.print:03:56:14.886]                        'Categorical',
+[INFO] [amlb.print:03:56:14.886]                        'Categorical',
+[INFO] [amlb.print:03:56:14.886]                        'Categorical',
+[INFO] [amlb.print:03:56:14.886]                        'Categorical',
+[INFO] [amlb.print:03:56:14.887]                        'Categorical',
+[INFO] [amlb.print:03:56:14.887]                        'Categorical',
+[INFO] [amlb.print:03:56:14.887]                        'Categorical',
+[INFO] [amlb.print:03:56:14.887]                        'Categorical',
+[INFO] [amlb.print:03:56:14.888]                        'Categorical',
+[INFO] [amlb.print:03:56:14.888]                        'Categorical',
+[INFO] [amlb.print:03:56:14.888]                        'Categorical',
+[INFO] [amlb.print:03:56:14.888]                        'Categorical',
+[INFO] [amlb.print:03:56:14.888]                        'Categorical',
+[INFO] [amlb.print:03:56:14.888]                        'Categorical',
+[INFO] [amlb.print:03:56:14.888]                        'Categorical',
+[INFO] [amlb.print:03:56:14.889]                        'Categorical',
+[INFO] [amlb.print:03:56:14.889]                        'Categorical',
+[INFO] [amlb.print:03:56:14.889]                        'Categorical',
+[INFO] [amlb.print:03:56:14.889]                        'Categorical',
+[INFO] [amlb.print:03:56:14.889]                        'Categorical',
+[INFO] [amlb.print:03:56:14.889]                        'Categorical',
+[INFO] [amlb.print:03:56:14.890]                        'Categorical',
+[INFO] [amlb.print:03:56:14.890]                        'Categorical',
+[INFO] [amlb.print:03:56:14.890]                        'Categorical',
+[INFO] [amlb.print:03:56:14.890]                        'Categorical',
+[INFO] [amlb.print:03:56:14.890]                        'Categorical',
+[INFO] [amlb.print:03:56:14.890]                        'Categorical',
+[INFO] [amlb.print:03:56:14.890]                        'Categorical',
+[INFO] [amlb.print:03:56:14.891]                        'Categorical',
+[INFO] [amlb.print:03:56:14.891]                        'Categorical',
+[INFO] [amlb.print:03:56:14.891]                        'Categorical',
+[INFO] [amlb.print:03:56:14.891]                        'Categorical',
+[INFO] [amlb.print:03:56:14.891]                        'Categorical',
+[INFO] [amlb.print:03:56:14.891]                        'Categorical',
+[INFO] [amlb.print:03:56:14.891]                        'Categorical',
+[INFO] [amlb.print:03:56:14.892]                        'Categorical',
+[INFO] [amlb.print:03:56:14.892]                        'Categorical',
+[INFO] [amlb.print:03:56:14.892]                        'Categorical',
+[INFO] [amlb.print:03:56:14.892]                        'Categorical',
+[INFO] [amlb.print:03:56:14.892]                        'Categorical',
+[INFO] [amlb.print:03:56:14.892]                        'Categorical',
+[INFO] [amlb.print:03:56:14.892]                        'Categorical',
+[INFO] [amlb.print:03:56:14.893]                        'Categorical'],
+[INFO] [amlb.print:03:56:14.893]   'test': { 'X_enc': '/tmp/tmp9eo5agkl/test.X_enc.npy',
+[INFO] [amlb.print:03:56:14.893]             'y_enc': '/tmp/tmp9eo5agkl/test.y_enc.npy'},
+[INFO] [amlb.print:03:56:14.893]   'train': { 'X_enc': '/tmp/tmp9eo5agkl/train.X_enc.npy',
+[INFO] [amlb.print:03:56:14.893]              'y_enc': '/tmp/tmp9eo5agkl/train.y_enc.npy'}}
+[INFO] [amlb.print:03:56:14.893] [WARNING] [2021-02-02 03:56:14,883:Client-AutoML(535651437):Covertype] Time limit for a single run is higher than total time limit. Capping the limit for a single run to the total time given to SMAC (3592.777631)
+[INFO] [amlb.print:03:56:16.433] [WARNING] [2021-02-02 03:56:14,883:Client-AutoML(535651437):Covertype] Capping the per_run_time_limit to 1796.0 to have time for a least 2 models in each process.
+[INFO] [amlb.print:03:56:16.433] [WARNING] [2021-02-02 03:56:16,432:Client-AutoMLSMBO(535651437)::Covertype] Could not find runs for instance cifar_10
+[INFO] [amlb.print:03:56:16.439] [WARNING] [2021-02-02 03:56:16,439:Client-AutoMLSMBO(535651437)::Covertype] Could not find runs for instance gtsrb-hog03
+[INFO] [amlb.print:03:56:16.442] [WARNING] [2021-02-02 03:56:16,442:Client-AutoMLSMBO(535651437)::Covertype] Could not find runs for instance kuzushiji-49
+[INFO] [amlb.print:03:56:16.452] [WARNING] [2021-02-02 03:56:16,451:Client-AutoMLSMBO(535651437)::Covertype] Could not find runs for instance svhn
+[INFO] [amlb.print:03:56:16.584] [WARNING] [2021-02-02 03:56:16,584:Client-AutoMLSMBO(535651437)::Covertype] Found no best configuration for instance kuzushiji-49
+[INFO] [amlb.print:03:56:16.585] [WARNING] [2021-02-02 03:56:16,584:Client-AutoMLSMBO(535651437)::Covertype] Found no best configuration for instance svhn
+[INFO] [amlb.utils.process:03:56:49.026] [513063] CPU Utilization: 34.2%
+[INFO] [amlb.utils.process:03:56:49.027] [513063] Memory Usage: 28.2%
+[INFO] [amlb.utils.process:03:56:49.027] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:03:58:49.038] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:03:58:49.122] [513063] Memory Usage: 30.9%
+[INFO] [amlb.utils.process:03:58:49.129] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:00:49.135] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:00:49.138] [513063] Memory Usage: 30.9%
+[INFO] [amlb.utils.process:04:00:49.138] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:02:49.152] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:02:49.222] [513063] Memory Usage: 32.4%
+[INFO] [amlb.utils.process:04:02:49.222] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:04:49.228] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:04:49.229] [513063] Memory Usage: 30.2%
+[INFO] [amlb.utils.process:04:04:49.230] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:06:49.236] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:06:49.243] [513063] Memory Usage: 31.1%
+[INFO] [amlb.utils.process:04:06:49.244] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:08:49.253] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:08:49.259] [513063] Memory Usage: 31.8%
+[INFO] [amlb.utils.process:04:08:49.259] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:10:49.268] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:10:49.275] [513063] Memory Usage: 32.4%
+[INFO] [amlb.utils.process:04:10:49.276] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:12:49.282] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:12:49.288] [513063] Memory Usage: 33.9%
+[INFO] [amlb.utils.process:04:12:49.289] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:14:49.293] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:14:49.294] [513063] Memory Usage: 31.4%
+[INFO] [amlb.utils.process:04:14:49.295] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:16:49.297] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:04:16:49.299] [513063] Memory Usage: 30.8%
+[INFO] [amlb.utils.process:04:16:49.299] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:18:49.304] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:18:49.308] [513063] Memory Usage: 30.8%
+[INFO] [amlb.utils.process:04:18:49.308] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:20:49.315] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:20:49.319] [513063] Memory Usage: 31.0%
+[INFO] [amlb.utils.process:04:20:49.319] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:22:49.324] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:22:49.329] [513063] Memory Usage: 28.6%
+[INFO] [amlb.utils.process:04:22:49.329] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:24:49.333] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:24:49.336] [513063] Memory Usage: 28.4%
+[INFO] [amlb.utils.process:04:24:49.336] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:04:26:49.340] [513063] CPU Utilization: 96.6%
+[INFO] [amlb.utils.process:04:26:49.341] [513063] Memory Usage: 22.8%
+[INFO] [amlb.utils.process:04:26:49.342] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:04:28:49.349] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:04:28:49.357] [513063] Memory Usage: 27.4%
+[INFO] [amlb.utils.process:04:28:49.357] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:04:30:49.361] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:04:30:49.363] [513063] Memory Usage: 26.1%
+[INFO] [amlb.utils.process:04:30:49.364] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:04:32:49.370] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:32:49.375] [513063] Memory Usage: 28.3%
+[INFO] [amlb.utils.process:04:32:49.376] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:04:34:49.382] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:34:49.384] [513063] Memory Usage: 28.0%
+[INFO] [amlb.utils.process:04:34:49.384] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:04:36:49.390] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:36:49.391] [513063] Memory Usage: 28.5%
+[INFO] [amlb.utils.process:04:36:49.392] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:04:38:49.395] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:38:49.397] [513063] Memory Usage: 29.8%
+[INFO] [amlb.utils.process:04:38:49.397] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:04:40:49.404] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:40:49.408] [513063] Memory Usage: 32.9%
+[INFO] [amlb.utils.process:04:40:49.408] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:04:42:49.414] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:42:49.416] [513063] Memory Usage: 32.3%
+[INFO] [amlb.utils.process:04:42:49.416] [513063] Disk Usage: 66.3%
+[INFO] [amlb.utils.process:04:44:49.420] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:44:49.422] [513063] Memory Usage: 32.3%
+[INFO] [amlb.utils.process:04:44:49.422] [513063] Disk Usage: 67.3%
+[INFO] [amlb.utils.process:04:46:49.429] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:04:46:49.431] [513063] Memory Usage: 30.5%
+[INFO] [amlb.utils.process:04:46:49.431] [513063] Disk Usage: 67.3%
+[INFO] [amlb.utils.process:04:48:49.442] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:48:49.444] [513063] Memory Usage: 32.4%
+[INFO] [amlb.utils.process:04:48:49.444] [513063] Disk Usage: 66.3%
+[INFO] [amlb.utils.process:04:50:49.451] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:50:49.454] [513063] Memory Usage: 33.1%
+[INFO] [amlb.utils.process:04:50:49.455] [513063] Disk Usage: 66.3%
+[INFO] [amlb.utils.process:04:52:49.464] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:52:49.467] [513063] Memory Usage: 32.6%
+[INFO] [amlb.utils.process:04:52:49.468] [513063] Disk Usage: 66.4%
+[INFO] [amlb.utils.process:04:54:49.476] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:04:54:49.480] [513063] Memory Usage: 33.3%
+[INFO] [amlb.utils.process:04:54:49.481] [513063] Disk Usage: 66.4%
+[INFO] [amlb.utils.process:04:56:49.484] [513063] CPU Utilization: 58.5%
+[INFO] [amlb.utils.process:04:56:49.486] [513063] Memory Usage: 8.0%
+[INFO] [amlb.utils.process:04:56:49.486] [513063] Disk Usage: 66.4%
+[INFO] [amlb.print:04:57:24.668] [WARNING] [2021-02-02 03:56:16,584:Client-AutoMLSMBO(535651437)::Covertype] Found no best configuration for instance cifar_10
+[INFO] [amlb.print:04:57:24.669] INFO:__main__:Auto-sklearn additional constructor arguments: {}
+[INFO] [amlb.print:04:57:24.669] [WARNING] [2021-02-02 03:56:16,584:Client-AutoMLSMBO(535651437)::Covertype] Found no best configuration for instance gtsrb-hog03
+[INFO] [amlb.print:04:57:24.669] INFO:__main__:Auto-sklearn fit() arguments: {'dataset_name': 'Covertype'}
+[INFO] [amlb.print:04:57:24.670] 
+[INFO] [amlb.print:04:57:24.670] 
+[INFO] [amlb.print:04:57:24.670] 
+[INFO] [amlb.results:04:57:24.974] Predictions preview:
+            1         2             3             4             5             6             7 predictions truth
+0   0.163081  0.542362  8.190544e-02  1.307574e-07  1.615370e-01  5.111164e-02  3.413086e-06           2     2
+1   0.607954  0.384974  3.104207e-06  5.614110e-08  8.696813e-07  5.796366e-07  7.067150e-03           1     2
+2   0.021303  0.953082  3.045797e-04  3.932764e-08  2.529661e-02  3.079175e-06  1.105236e-05           2     2
+3   0.005407  0.994593  2.578960e-08  6.648883e-09  2.656282e-08  6.961281e-09  5.424083e-08           2     2
+4   0.865210  0.134691  1.406041e-06  9.939662e-09  9.082608e-06  1.432577e-06  8.700636e-05           1     2
+5   0.217019  0.782928  9.885152e-07  1.354454e-08  3.727729e-07  4.729545e-05  4.167445e-06           2     2
+6   0.268816  0.731179  1.040702e-06  3.182398e-08  5.248592e-07  1.097157e-07  2.914892e-06           2     2
+7   0.000798  0.999064  4.596031e-06  2.211987e-08  1.290370e-04  1.976006e-06  1.763858e-06           2     2
+8   0.089643  0.910354  9.492280e-07  5.509213e-08  3.353308e-07  3.754426e-07  8.975789e-07           2     2
+9   0.038631  0.961290  8.948888e-07  3.400601e-08  4.123634e-05  1.500625e-07  3.663827e-05           2     2
+10  0.043074  0.956511  4.659753e-05  7.299945e-08  1.401901e-04  2.266955e-04  6.992966e-07           2     2
+11  0.054537  0.945438  1.228034e-06  9.032374e-08  1.986591e-05  1.467383e-07  4.122583e-06           2     2
+12  0.434014  0.565928  2.938436e-07  3.335996e-08  9.198176e-07  8.513132e-08  5.619753e-05           2     2
+13  0.084232  0.915633  1.120208e-04  7.257963e-08  8.255671e-06  1.162688e-05  3.273827e-06           2     2
+14  0.093889  0.660484  5.080496e-05  5.291382e-07  2.455685e-01  4.945238e-06  1.460474e-06           2     2
+15  0.856683  0.143252  1.897910e-07  3.401725e-08  6.132096e-05  1.107634e-07  2.847622e-06           1     2
+16  0.006882  0.993106  8.636203e-07  6.035772e-08  5.979769e-06  2.577371e-06  2.330940e-06           2     2
+17  0.001882  0.988970  2.285612e-05  1.243097e-05  9.105384e-03  7.534260e-06  9.509099e-08           2     2
+18  0.041881  0.549975  3.347941e-06  1.211664e-08  4.081248e-01  9.976735e-06  5.599124e-06           2     2
+19  0.008508  0.991490  4.314663e-07  8.226563e-08  8.304388e-08  3.337485e-08  1.066295e-06           2     2
+
+[INFO] [amlb.results:04:57:26.252] Predictions saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/0/predictions.csv`.
+[INFO] [amlb.results:04:57:26.298] Loading metadata from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/0/metadata.json`.
+[INFO] [amlb.results:04:57:26.364] Loading predictions from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/0/predictions.csv`.
+[INFO] [amlb.results:04:57:27.223] Metric scores: { 'acc': 0.897576675501704,
+  'app_version': 'dev [master, 54881a2]',
+  'balacc': 0.9262407153833138,
+  'constraint': '1h12c',
+  'duration': nan,
+  'fold': 0,
+  'framework': 'autosklearn',
+  'id': 'openml.org/t/7593',
+  'info': None,
+  'logloss': 0.26832432191746036,
+  'metric': 'logloss',
+  'mode': 'local',
+  'models_count': 2,
+  'params': '',
+  'predict_duration': 35.219191789627075,
+  'result': 0.26832432191746036,
+  'seed': 535651437,
+  'task': 'Covertype',
+  'training_duration': 3613.8408048152924,
+  'utc': '2021-02-02T04:57:26',
+  'version': '0.12.1'}
+[INFO] [amlb.job:04:57:27.233] Job local.covertype.1h12c.Covertype.0.autosklearn executed in 3758.211 seconds.
+[INFO] [amlb.job:04:57:27.234] 
+-----------------------------------------------------------
+Starting job local.covertype.1h12c.Covertype.1.autosklearn.
+[INFO] [amlb.benchmark:04:57:27.765] Assigning 12 cores (total=12) for new task Covertype.
+[INFO] [amlb.benchmark:04:57:27.765] Assigning 58149 MB (total=64324 MB) for new Covertype task.
+[INFO] [amlb.benchmark:04:57:27.766] Running task Covertype on framework autosklearn with config:
+TaskConfig(framework='autosklearn', framework_params={}, framework_version='stable', type='classification', name='Covertype', fold=1, metrics=['logloss', 'acc', 'balacc'], metric='logloss', seed=535651438, max_runtime_seconds=3600, cores=12, max_mem_size_mb=58149, min_vol_size_mb=16384, input_dir='/home/administrator/.openml/cache', output_dir='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448', output_predictions_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/1/predictions.csv', ext={}, output_metadata_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/1/metadata.json')
+[INFO] [amlb.utils.process:04:58:34.315] Running cmd `/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin/python -W ignore /home/administrator/nil/automlbenchmark/frameworks/autosklearn/exec.py`
+[INFO] [amlb.print:04:58:36.298] INFO:__main__:
+[INFO] [amlb.print:04:58:36.298] **** Auto-sklearn [v0.12.1]****
+[INFO] [amlb.print:04:58:36.298] 
+[INFO] [amlb.print:04:58:36.298] INFO:__main__:Running Auto-sklearn for Covertype with a maximum time of 3600s on 12 cores with 58149MB, optimizing log_loss.
+[INFO] [amlb.print:04:58:36.387] { 'predictors_type': [ 'Numerical',
+[INFO] [amlb.utils.process:04:58:49.487] [513063] CPU Utilization: 10.2%
+[INFO] [amlb.utils.process:04:58:49.488] [513063] Memory Usage: 10.0%
+[INFO] [amlb.utils.process:04:58:49.489] [513063] Disk Usage: 66.0%
+[INFO] [amlb.print:04:58:50.222]                        'Numerical',
+[INFO] [amlb.print:04:58:50.222]                        'Numerical',
+[INFO] [amlb.print:04:58:50.222]                        'Numerical',
+[INFO] [amlb.print:04:58:50.223]                        'Numerical',
+[INFO] [amlb.print:04:58:50.223]                        'Numerical',
+[INFO] [amlb.print:04:58:50.223]                        'Numerical',
+[INFO] [amlb.print:04:58:50.223]                        'Numerical',
+[INFO] [amlb.print:04:58:50.223]                        'Numerical',
+[INFO] [amlb.print:04:58:50.224]                        'Numerical',
+[INFO] [amlb.print:04:58:50.224]                        'Categorical',
+[INFO] [amlb.print:04:58:50.224]                        'Categorical',
+[INFO] [amlb.print:04:58:50.224]                        'Categorical',
+[INFO] [amlb.print:04:58:50.224]                        'Categorical',
+[INFO] [amlb.print:04:58:50.224]                        'Categorical',
+[INFO] [amlb.print:04:58:50.224]                        'Categorical',
+[INFO] [amlb.print:04:58:50.225]                        'Categorical',
+[INFO] [amlb.print:04:58:50.225]                        'Categorical',
+[INFO] [amlb.print:04:58:50.225]                        'Categorical',
+[INFO] [amlb.print:04:58:50.225]                        'Categorical',
+[INFO] [amlb.print:04:58:50.225]                        'Categorical',
+[INFO] [amlb.print:04:58:50.225]                        'Categorical',
+[INFO] [amlb.print:04:58:50.225]                        'Categorical',
+[INFO] [amlb.print:04:58:50.226]                        'Categorical',
+[INFO] [amlb.print:04:58:50.226]                        'Categorical',
+[INFO] [amlb.print:04:58:50.226]                        'Categorical',
+[INFO] [amlb.print:04:58:50.226]                        'Categorical',
+[INFO] [amlb.print:04:58:50.226]                        'Categorical',
+[INFO] [amlb.print:04:58:50.226]                        'Categorical',
+[INFO] [amlb.print:04:58:50.226]                        'Categorical',
+[INFO] [amlb.print:04:58:50.227]                        'Categorical',
+[INFO] [amlb.print:04:58:50.227]                        'Categorical',
+[INFO] [amlb.print:04:58:50.227]                        'Categorical',
+[INFO] [amlb.print:04:58:50.227]                        'Categorical',
+[INFO] [amlb.print:04:58:50.227]                        'Categorical',
+[INFO] [amlb.print:04:58:50.227]                        'Categorical',
+[INFO] [amlb.print:04:58:50.227]                        'Categorical',
+[INFO] [amlb.print:04:58:50.228]                        'Categorical',
+[INFO] [amlb.print:04:58:50.231]                        'Categorical',
+[INFO] [amlb.print:04:58:50.231]                        'Categorical',
+[INFO] [amlb.print:04:58:50.231]                        'Categorical',
+[INFO] [amlb.print:04:58:50.232]                        'Categorical',
+[INFO] [amlb.print:04:58:50.232]                        'Categorical',
+[INFO] [amlb.print:04:58:50.232]                        'Categorical',
+[INFO] [amlb.print:04:58:50.232]                        'Categorical',
+[INFO] [amlb.print:04:58:50.232]                        'Categorical',
+[INFO] [amlb.print:04:58:50.232]                        'Categorical',
+[INFO] [amlb.print:04:58:50.232]                        'Categorical',
+[INFO] [amlb.print:04:58:50.232]                        'Categorical',
+[INFO] [amlb.print:04:58:50.233]                        'Categorical',
+[INFO] [amlb.print:04:58:50.233]                        'Categorical',
+[INFO] [amlb.print:04:58:50.233]                        'Categorical',
+[INFO] [amlb.print:04:58:50.233]                        'Categorical',
+[INFO] [amlb.print:04:58:50.234]                        'Categorical'],
+[INFO] [amlb.print:04:58:50.234]   'test': { 'X_enc': '/tmp/tmpoygk2uqj/test.X_enc.npy',
+[INFO] [amlb.print:04:58:50.234]             'y_enc': '/tmp/tmpoygk2uqj/test.y_enc.npy'},
+[INFO] [amlb.print:04:58:50.234]   'train': { 'X_enc': '/tmp/tmpoygk2uqj/train.X_enc.npy',
+[INFO] [amlb.print:04:58:50.234]              'y_enc': '/tmp/tmpoygk2uqj/train.y_enc.npy'}}
+[INFO] [amlb.print:04:58:50.234] [WARNING] [2021-02-02 04:58:50,221:Client-AutoML(535651438):Covertype] Time limit for a single run is higher than total time limit. Capping the limit for a single run to the total time given to SMAC (3592.678559)
+[INFO] [amlb.print:04:58:51.760] [WARNING] [2021-02-02 04:58:50,222:Client-AutoML(535651438):Covertype] Capping the per_run_time_limit to 1796.0 to have time for a least 2 models in each process.
+[INFO] [amlb.print:04:58:51.760] [WARNING] [2021-02-02 04:58:51,760:Client-AutoMLSMBO(535651438)::Covertype] Could not find runs for instance cifar_10
+[INFO] [amlb.print:04:58:51.767] [WARNING] [2021-02-02 04:58:51,767:Client-AutoMLSMBO(535651438)::Covertype] Could not find runs for instance gtsrb-hog03
+[INFO] [amlb.print:04:58:51.770] [WARNING] [2021-02-02 04:58:51,770:Client-AutoMLSMBO(535651438)::Covertype] Could not find runs for instance kuzushiji-49
+[INFO] [amlb.print:04:58:51.785] [WARNING] [2021-02-02 04:58:51,785:Client-AutoMLSMBO(535651438)::Covertype] Could not find runs for instance svhn
+[INFO] [amlb.print:04:58:51.916] [WARNING] [2021-02-02 04:58:51,915:Client-AutoMLSMBO(535651438)::Covertype] Found no best configuration for instance kuzushiji-49
+[INFO] [amlb.print:04:58:51.916] [WARNING] [2021-02-02 04:58:51,915:Client-AutoMLSMBO(535651438)::Covertype] Found no best configuration for instance svhn
+[INFO] [amlb.print:04:58:51.916] [WARNING] [2021-02-02 04:58:51,916:Client-AutoMLSMBO(535651438)::Covertype] Found no best configuration for instance cifar_10
+[INFO] [amlb.print:04:58:51.917] [WARNING] [2021-02-02 04:58:51,916:Client-AutoMLSMBO(535651438)::Covertype] Found no best configuration for instance gtsrb-hog03
+[INFO] [amlb.utils.process:05:00:49.502] [513063] CPU Utilization: 97.6%
+[INFO] [amlb.utils.process:05:00:49.507] [513063] Memory Usage: 30.5%
+[INFO] [amlb.utils.process:05:00:49.507] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:02:49.550] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:02:49.575] [513063] Memory Usage: 32.7%
+[INFO] [amlb.utils.process:05:02:49.576] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:04:49.671] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:05:04:49.792] [513063] Memory Usage: 31.7%
+[INFO] [amlb.utils.process:05:04:49.792] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:06:49.799] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:06:49.804] [513063] Memory Usage: 32.6%
+[INFO] [amlb.utils.process:05:06:49.804] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:08:49.812] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:08:49.816] [513063] Memory Usage: 30.9%
+[INFO] [amlb.utils.process:05:08:49.816] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:10:49.824] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:10:49.828] [513063] Memory Usage: 30.7%
+[INFO] [amlb.utils.process:05:10:49.829] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:12:49.835] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:12:49.838] [513063] Memory Usage: 32.1%
+[INFO] [amlb.utils.process:05:12:49.839] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:14:49.846] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:14:49.850] [513063] Memory Usage: 33.6%
+[INFO] [amlb.utils.process:05:14:49.850] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:16:49.858] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:16:49.863] [513063] Memory Usage: 35.2%
+[INFO] [amlb.utils.process:05:16:49.864] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:18:49.871] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:05:18:49.874] [513063] Memory Usage: 30.6%
+[INFO] [amlb.utils.process:05:18:49.875] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:20:49.881] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:20:49.885] [513063] Memory Usage: 30.7%
+[INFO] [amlb.utils.process:05:20:49.885] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:22:49.890] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:22:49.892] [513063] Memory Usage: 28.9%
+[INFO] [amlb.utils.process:05:22:49.892] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:24:49.903] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:24:49.905] [513063] Memory Usage: 28.5%
+[INFO] [amlb.utils.process:05:24:49.906] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:26:49.912] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:26:49.915] [513063] Memory Usage: 28.3%
+[INFO] [amlb.utils.process:05:26:49.916] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:28:49.922] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:28:49.924] [513063] Memory Usage: 27.6%
+[INFO] [amlb.utils.process:05:28:49.924] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:05:30:49.928] [513063] CPU Utilization: 97.7%
+[INFO] [amlb.utils.process:05:30:49.930] [513063] Memory Usage: 24.4%
+[INFO] [amlb.utils.process:05:30:49.931] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:05:32:49.938] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:32:49.940] [513063] Memory Usage: 27.4%
+[INFO] [amlb.utils.process:05:32:49.940] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:05:34:49.944] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:34:49.945] [513063] Memory Usage: 25.3%
+[INFO] [amlb.utils.process:05:34:49.946] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:05:36:49.950] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:36:49.951] [513063] Memory Usage: 27.3%
+[INFO] [amlb.utils.process:05:36:49.951] [513063] Disk Usage: 66.3%
+[INFO] [amlb.utils.process:05:38:49.960] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:05:38:49.964] [513063] Memory Usage: 27.1%
+[INFO] [amlb.utils.process:05:38:49.964] [513063] Disk Usage: 66.3%
+[INFO] [amlb.utils.process:05:40:49.968] [513063] CPU Utilization: 99.7%
+[INFO] [amlb.utils.process:05:40:49.970] [513063] Memory Usage: 29.0%
+[INFO] [amlb.utils.process:05:40:49.970] [513063] Disk Usage: 66.4%
+[INFO] [amlb.utils.process:05:42:49.977] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:42:49.980] [513063] Memory Usage: 30.6%
+[INFO] [amlb.utils.process:05:42:49.980] [513063] Disk Usage: 66.4%
+[INFO] [amlb.utils.process:05:44:49.985] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:44:49.988] [513063] Memory Usage: 31.3%
+[INFO] [amlb.utils.process:05:44:49.989] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:05:46:49.995] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:46:49.999] [513063] Memory Usage: 31.5%
+[INFO] [amlb.utils.process:05:46:50.000] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:05:48:50.005] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:48:50.008] [513063] Memory Usage: 28.5%
+[INFO] [amlb.utils.process:05:48:50.008] [513063] Disk Usage: 66.6%
+[INFO] [amlb.utils.process:05:50:50.013] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:50:50.016] [513063] Memory Usage: 29.7%
+[INFO] [amlb.utils.process:05:50:50.016] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:05:52:50.029] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:52:50.048] [513063] Memory Usage: 29.3%
+[INFO] [amlb.utils.process:05:52:50.048] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:05:54:50.055] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:54:50.059] [513063] Memory Usage: 29.9%
+[INFO] [amlb.utils.process:05:54:50.059] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:05:56:50.063] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:05:56:50.067] [513063] Memory Usage: 32.6%
+[INFO] [amlb.utils.process:05:56:50.067] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:05:58:50.070] [513063] CPU Utilization: 84.7%
+[INFO] [amlb.utils.process:05:58:50.071] [513063] Memory Usage: 8.0%
+[INFO] [amlb.utils.process:05:58:50.071] [513063] Disk Usage: 66.5%
+[INFO] [amlb.print:05:59:29.820] 
+[INFO] [amlb.print:05:59:29.823] INFO:__main__:Environment: environ({'AMLB_PATH': '/home/administrator/nil/automlbenchmark/amlb', 'PATH': '/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin:/home/administrator/.local/bin:/home/administrator/anaconda3/bin:/home/administrator/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PWD': '/home/administrator/nil/automlbenchmark', 'PYTHONPATH': '/home/administrator/nil/automlbenchmark', 'LC_CTYPE': 'C.UTF-8', 'JOBLIB_TEMP_FOLDER': '/tmp', 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1', 'KMP_INIT_AT_FORK': 'FALSE', 'KMP_DUPLICATE_LIB_OK': 'True'})
+[INFO] [amlb.print:05:59:29.823] 
+[INFO] [amlb.print:05:59:29.823] INFO:__main__:Using 4845.75MB memory per job and on a total of 12 jobs.
+[INFO] [amlb.print:05:59:29.824] 
+[INFO] [amlb.print:05:59:29.824] WARNING:__main__:Using meta-learned initialization, which might be bad (leakage).
+[INFO] [amlb.print:05:59:29.824] 
+[INFO] [amlb.print:05:59:29.824] INFO:__main__:Auto-sklearn constructor arguments: {'metric': log_loss, 'time_left_for_this_task': 3600, 'n_jobs': 12, 'seed': 535651438}
+[INFO] [amlb.print:05:59:29.824] 
+[INFO] [amlb.print:05:59:29.824] INFO:__main__:Auto-sklearn additional constructor arguments: {}
+[INFO] [amlb.print:05:59:29.824] 
+[INFO] [amlb.print:05:59:29.824] INFO:__main__:Auto-sklearn fit() arguments: {'dataset_name': 'Covertype'}
+[INFO] [amlb.print:05:59:29.825] 
+[INFO] [amlb.print:05:59:29.825] 
+[INFO] [amlb.print:05:59:29.825] 
+[INFO] [amlb.results:05:59:30.158] Predictions preview:
+            1         2             3             4             5             6             7 predictions truth
+0   0.150214  0.849676  7.027463e-08  2.672233e-09  1.081479e-04  1.185876e-07  2.357643e-06           2     2
+1   0.805134  0.194674  4.442643e-08  1.334242e-09  1.711014e-08  3.277732e-08  1.912177e-04           1     2
+2   0.093177  0.906822  1.453191e-08  1.296712e-09  1.715866e-08  5.563347e-07  6.434692e-07           2     2
+3   0.021606  0.967076  4.413254e-04  2.070110e-08  1.073451e-02  1.422256e-04  2.984418e-07           2     2
+4   0.001570  0.991987  1.297407e-04  1.336059e-10  6.302241e-03  1.003761e-05  8.498430e-07           2     2
+5   0.083317  0.915065  1.392134e-06  6.857476e-10  1.612523e-03  3.952273e-06  4.163875e-07           2     2
+6   0.006845  0.988300  4.626120e-05  2.662389e-09  4.510100e-03  2.968034e-04  1.023525e-06           2     2
+7   0.002867  0.809689  3.644761e-03  6.168611e-10  1.837935e-01  2.829440e-06  3.460686e-06           2     2
+8   0.984673  0.015318  1.242676e-08  1.845220e-10  2.292770e-08  1.668869e-07  8.441610e-06           1     2
+9   0.037827  0.962171  2.550977e-07  2.928698e-10  6.059391e-07  1.440748e-08  1.575196e-06           2     2
+10  0.050425  0.947228  7.249492e-04  1.236727e-10  1.002874e-03  6.184585e-04  8.042947e-07           2     2
+11  0.000853  0.999127  3.547745e-08  2.777363e-10  1.944294e-05  1.541955e-07  3.833837e-07           2     2
+12  0.044527  0.955471  2.254732e-08  2.885783e-09  1.309429e-06  2.123064e-07  7.355950e-09           2     2
+13  0.283653  0.716106  7.586231e-07  1.346168e-07  1.091341e-06  3.969708e-06  2.345718e-04           2     2
+14  0.006383  0.993564  4.021873e-06  5.916256e-09  4.841486e-05  3.114095e-07  5.178420e-07           2     2
+15  0.343563  0.656380  1.222003e-06  1.075397e-10  4.297817e-05  1.223117e-05  6.714895e-08           2     2
+16  0.005389  0.994569  2.926641e-07  1.142410e-08  4.019608e-05  1.068002e-06  3.345452e-09           2     2
+17  0.106622  0.893331  1.196732e-06  8.096174e-10  1.692128e-08  6.138953e-07  4.488571e-05           2     2
+18  0.016523  0.983476  3.274682e-08  1.447779e-10  1.377938e-07  9.461157e-08  1.377297e-07           2     2
+19  0.010072  0.980443  3.539807e-07  2.287917e-09  9.482376e-03  1.686521e-06  9.409415e-08           2     2
+
+[INFO] [amlb.results:05:59:31.425] Predictions saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/1/predictions.csv`.
+[INFO] [amlb.results:05:59:31.473] Loading metadata from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/1/metadata.json`.
+[INFO] [amlb.results:05:59:31.473] Loading predictions from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/1/predictions.csv`.
+[INFO] [amlb.results:05:59:32.298] Metric scores: { 'acc': 0.9250111872224708,
+  'app_version': 'dev [master, 54881a2]',
+  'balacc': 0.9393770726165841,
+  'constraint': '1h12c',
+  'duration': nan,
+  'fold': 1,
+  'framework': 'autosklearn',
+  'id': 'openml.org/t/7593',
+  'info': None,
+  'logloss': 0.21157453073379284,
+  'metric': 'logloss',
+  'mode': 'local',
+  'models_count': 1,
+  'params': '',
+  'predict_duration': 19.678852796554565,
+  'result': 0.21157453073379284,
+  'seed': 535651438,
+  'task': 'Covertype',
+  'training_duration': 3612.447486639023,
+  'utc': '2021-02-02T05:59:31',
+  'version': '0.12.1'}
+[INFO] [amlb.job:05:59:32.310] Job local.covertype.1h12c.Covertype.1.autosklearn executed in 3725.076 seconds.
+[INFO] [amlb.job:05:59:32.311] 
+-----------------------------------------------------------
+Starting job local.covertype.1h12c.Covertype.2.autosklearn.
+[INFO] [amlb.benchmark:05:59:32.905] Assigning 12 cores (total=12) for new task Covertype.
+[INFO] [amlb.benchmark:05:59:32.906] Assigning 58143 MB (total=64324 MB) for new Covertype task.
+[INFO] [amlb.benchmark:05:59:32.906] Running task Covertype on framework autosklearn with config:
+TaskConfig(framework='autosklearn', framework_params={}, framework_version='stable', type='classification', name='Covertype', fold=2, metrics=['logloss', 'acc', 'balacc'], metric='logloss', seed=535651439, max_runtime_seconds=3600, cores=12, max_mem_size_mb=58143, min_vol_size_mb=16384, input_dir='/home/administrator/.openml/cache', output_dir='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448', output_predictions_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/2/predictions.csv', ext={}, output_metadata_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/2/metadata.json')
+[INFO] [amlb.utils.process:06:00:39.726] Running cmd `/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin/python -W ignore /home/administrator/nil/automlbenchmark/frameworks/autosklearn/exec.py`
+[INFO] [amlb.print:06:00:41.602] INFO:__main__:
+[INFO] [amlb.print:06:00:41.602] **** Auto-sklearn [v0.12.1]****
+[INFO] [amlb.print:06:00:41.603] 
+[INFO] [amlb.print:06:00:41.603] INFO:__main__:Running Auto-sklearn for Covertype with a maximum time of 3600s on 12 cores with 58143MB, optimizing log_loss.
+[INFO] [amlb.print:06:00:41.718] { 'predictors_type': [ 'Numerical',
+[INFO] [amlb.utils.process:06:00:50.072] [513063] CPU Utilization: 10.2%
+[INFO] [amlb.utils.process:06:00:50.073] [513063] Memory Usage: 10.0%
+[INFO] [amlb.utils.process:06:00:50.073] [513063] Disk Usage: 66.0%
+[INFO] [amlb.print:06:00:54.561]                        'Numerical',
+[INFO] [amlb.print:06:00:54.561]                        'Numerical',
+[INFO] [amlb.print:06:00:54.562]                        'Numerical',
+[INFO] [amlb.print:06:00:54.562]                        'Numerical',
+[INFO] [amlb.print:06:00:54.562]                        'Numerical',
+[INFO] [amlb.print:06:00:54.562]                        'Numerical',
+[INFO] [amlb.print:06:00:54.563]                        'Numerical',
+[INFO] [amlb.print:06:00:54.563]                        'Numerical',
+[INFO] [amlb.print:06:00:54.563]                        'Numerical',
+[INFO] [amlb.print:06:00:54.563]                        'Categorical',
+[INFO] [amlb.print:06:00:54.564]                        'Categorical',
+[INFO] [amlb.print:06:00:54.564]                        'Categorical',
+[INFO] [amlb.print:06:00:54.564]                        'Categorical',
+[INFO] [amlb.print:06:00:54.564]                        'Categorical',
+[INFO] [amlb.print:06:00:54.564]                        'Categorical',
+[INFO] [amlb.print:06:00:54.565]                        'Categorical',
+[INFO] [amlb.print:06:00:54.565]                        'Categorical',
+[INFO] [amlb.print:06:00:54.565]                        'Categorical',
+[INFO] [amlb.print:06:00:54.565]                        'Categorical',
+[INFO] [amlb.print:06:00:54.566]                        'Categorical',
+[INFO] [amlb.print:06:00:54.566]                        'Categorical',
+[INFO] [amlb.print:06:00:54.566]                        'Categorical',
+[INFO] [amlb.print:06:00:54.566]                        'Categorical',
+[INFO] [amlb.print:06:00:54.566]                        'Categorical',
+[INFO] [amlb.print:06:00:54.566]                        'Categorical',
+[INFO] [amlb.print:06:00:54.567]                        'Categorical',
+[INFO] [amlb.print:06:00:54.567]                        'Categorical',
+[INFO] [amlb.print:06:00:54.567]                        'Categorical',
+[INFO] [amlb.print:06:00:54.567]                        'Categorical',
+[INFO] [amlb.print:06:00:54.567]                        'Categorical',
+[INFO] [amlb.print:06:00:54.567]                        'Categorical',
+[INFO] [amlb.print:06:00:54.568]                        'Categorical',
+[INFO] [amlb.print:06:00:54.568]                        'Categorical',
+[INFO] [amlb.print:06:00:54.568]                        'Categorical',
+[INFO] [amlb.print:06:00:54.568]                        'Categorical',
+[INFO] [amlb.print:06:00:54.568]                        'Categorical',
+[INFO] [amlb.print:06:00:54.568]                        'Categorical',
+[INFO] [amlb.print:06:00:54.568]                        'Categorical',
+[INFO] [amlb.print:06:00:54.569]                        'Categorical',
+[INFO] [amlb.print:06:00:54.569]                        'Categorical',
+[INFO] [amlb.print:06:00:54.569]                        'Categorical',
+[INFO] [amlb.print:06:00:54.569]                        'Categorical',
+[INFO] [amlb.print:06:00:54.569]                        'Categorical',
+[INFO] [amlb.print:06:00:54.569]                        'Categorical',
+[INFO] [amlb.print:06:00:54.569]                        'Categorical',
+[INFO] [amlb.print:06:00:54.570]                        'Categorical',
+[INFO] [amlb.print:06:00:54.570]                        'Categorical',
+[INFO] [amlb.print:06:00:54.570]                        'Categorical',
+[INFO] [amlb.print:06:00:54.570]                        'Categorical',
+[INFO] [amlb.print:06:00:54.570]                        'Categorical',
+[INFO] [amlb.print:06:00:54.570]                        'Categorical',
+[INFO] [amlb.print:06:00:54.570]                        'Categorical',
+[INFO] [amlb.print:06:00:54.571]                        'Categorical'],
+[INFO] [amlb.print:06:00:54.571]   'test': { 'X_enc': '/tmp/tmpzhheqx6m/test.X_enc.npy',
+[INFO] [amlb.print:06:00:54.571]             'y_enc': '/tmp/tmpzhheqx6m/test.y_enc.npy'},
+[INFO] [amlb.print:06:00:54.571]   'train': { 'X_enc': '/tmp/tmpzhheqx6m/train.X_enc.npy',
+[INFO] [amlb.print:06:00:54.571]              'y_enc': '/tmp/tmpzhheqx6m/train.y_enc.npy'}}
+[INFO] [amlb.print:06:00:54.571] [WARNING] [2021-02-02 06:00:54,561:Client-AutoML(535651439):Covertype] Time limit for a single run is higher than total time limit. Capping the limit for a single run to the total time given to SMAC (3592.601518)
+[INFO] [amlb.print:06:00:56.133] [WARNING] [2021-02-02 06:00:54,561:Client-AutoML(535651439):Covertype] Capping the per_run_time_limit to 1796.0 to have time for a least 2 models in each process.
+[INFO] [amlb.print:06:00:56.133] [WARNING] [2021-02-02 06:00:56,131:Client-AutoMLSMBO(535651439)::Covertype] Could not find runs for instance cifar_10
+[INFO] [amlb.print:06:00:56.138] [WARNING] [2021-02-02 06:00:56,138:Client-AutoMLSMBO(535651439)::Covertype] Could not find runs for instance gtsrb-hog03
+[INFO] [amlb.print:06:00:56.142] [WARNING] [2021-02-02 06:00:56,142:Client-AutoMLSMBO(535651439)::Covertype] Could not find runs for instance kuzushiji-49
+[INFO] [amlb.print:06:00:56.153] [WARNING] [2021-02-02 06:00:56,153:Client-AutoMLSMBO(535651439)::Covertype] Could not find runs for instance svhn
+[INFO] [amlb.print:06:00:56.295] [WARNING] [2021-02-02 06:00:56,294:Client-AutoMLSMBO(535651439)::Covertype] Found no best configuration for instance kuzushiji-49
+[INFO] [amlb.print:06:00:56.295] [WARNING] [2021-02-02 06:00:56,295:Client-AutoMLSMBO(535651439)::Covertype] Found no best configuration for instance svhn
+[INFO] [amlb.print:06:00:56.295] [WARNING] [2021-02-02 06:00:56,295:Client-AutoMLSMBO(535651439)::Covertype] Found no best configuration for instance cifar_10
+[INFO] [amlb.print:06:00:56.296] [WARNING] [2021-02-02 06:00:56,295:Client-AutoMLSMBO(535651439)::Covertype] Found no best configuration for instance gtsrb-hog03
+[INFO] [amlb.utils.process:06:02:50.081] [513063] CPU Utilization: 94.7%
+[INFO] [amlb.utils.process:06:02:50.086] [513063] Memory Usage: 30.8%
+[INFO] [amlb.utils.process:06:02:50.086] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:06:04:50.098] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:04:50.147] [513063] Memory Usage: 33.3%
+[INFO] [amlb.utils.process:06:04:50.148] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:06:06:50.166] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:06:06:50.182] [513063] Memory Usage: 31.5%
+[INFO] [amlb.utils.process:06:06:50.182] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:06:08:50.203] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:08:50.249] [513063] Memory Usage: 32.8%
+[INFO] [amlb.utils.process:06:08:50.250] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:06:10:50.316] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:10:50.319] [513063] Memory Usage: 31.1%
+[INFO] [amlb.utils.process:06:10:50.320] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:06:12:50.331] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:12:50.346] [513063] Memory Usage: 31.7%
+[INFO] [amlb.utils.process:06:12:50.348] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:06:14:50.378] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:14:50.383] [513063] Memory Usage: 32.8%
+[INFO] [amlb.utils.process:06:14:50.383] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:06:16:50.390] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:16:50.394] [513063] Memory Usage: 33.5%
+[INFO] [amlb.utils.process:06:16:50.394] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:06:18:50.399] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:18:50.403] [513063] Memory Usage: 33.4%
+[INFO] [amlb.utils.process:06:18:50.404] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:06:20:50.408] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:06:20:50.410] [513063] Memory Usage: 28.6%
+[INFO] [amlb.utils.process:06:20:50.410] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:06:22:50.414] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:22:50.416] [513063] Memory Usage: 29.4%
+[INFO] [amlb.utils.process:06:22:50.416] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:06:24:50.424] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:24:50.428] [513063] Memory Usage: 30.3%
+[INFO] [amlb.utils.process:06:24:50.428] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:06:26:50.440] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:26:50.445] [513063] Memory Usage: 30.5%
+[INFO] [amlb.utils.process:06:26:50.478] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:06:28:50.492] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:28:50.495] [513063] Memory Usage: 31.0%
+[INFO] [amlb.utils.process:06:28:50.495] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:06:30:50.502] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:30:50.505] [513063] Memory Usage: 28.3%
+[INFO] [amlb.utils.process:06:30:50.505] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:06:32:50.513] [513063] CPU Utilization: 95.2%
+[INFO] [amlb.utils.process:06:32:50.515] [513063] Memory Usage: 24.9%
+[INFO] [amlb.utils.process:06:32:50.515] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:06:34:50.521] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:34:50.523] [513063] Memory Usage: 27.4%
+[INFO] [amlb.utils.process:06:34:50.523] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:06:36:50.535] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:06:36:50.538] [513063] Memory Usage: 27.3%
+[INFO] [amlb.utils.process:06:36:50.539] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:06:38:50.548] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:38:50.555] [513063] Memory Usage: 28.2%
+[INFO] [amlb.utils.process:06:38:50.567] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:06:40:50.572] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:40:50.574] [513063] Memory Usage: 29.3%
+[INFO] [amlb.utils.process:06:40:50.574] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:06:42:50.580] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:42:50.582] [513063] Memory Usage: 29.8%
+[INFO] [amlb.utils.process:06:42:50.583] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:06:44:50.593] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:44:50.597] [513063] Memory Usage: 30.0%
+[INFO] [amlb.utils.process:06:44:50.597] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:06:46:50.607] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:46:50.609] [513063] Memory Usage: 31.1%
+[INFO] [amlb.utils.process:06:46:50.609] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:06:48:50.611] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:48:50.613] [513063] Memory Usage: 30.7%
+[INFO] [amlb.utils.process:06:48:50.613] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:06:50:50.616] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:06:50:50.618] [513063] Memory Usage: 27.7%
+[INFO] [amlb.utils.process:06:50:50.618] [513063] Disk Usage: 66.6%
+[INFO] [amlb.utils.process:06:52:50.626] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:52:50.633] [513063] Memory Usage: 30.2%
+[INFO] [amlb.utils.process:06:52:50.633] [513063] Disk Usage: 66.6%
+[INFO] [amlb.utils.process:06:54:50.640] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:54:50.650] [513063] Memory Usage: 29.6%
+[INFO] [amlb.utils.process:06:54:50.650] [513063] Disk Usage: 66.6%
+[INFO] [amlb.utils.process:06:56:50.657] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:56:50.663] [513063] Memory Usage: 29.9%
+[INFO] [amlb.utils.process:06:56:50.664] [513063] Disk Usage: 66.7%
+[INFO] [amlb.utils.process:06:58:50.701] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:06:58:50.801] [513063] Memory Usage: 31.6%
+[INFO] [amlb.utils.process:06:58:50.802] [513063] Disk Usage: 66.7%
+[INFO] [amlb.utils.process:07:00:50.805] [513063] CPU Utilization: 86.6%
+[INFO] [amlb.utils.process:07:00:50.805] [513063] Memory Usage: 8.1%
+[INFO] [amlb.utils.process:07:00:50.806] [513063] Disk Usage: 66.7%
+[INFO] [amlb.print:07:01:48.794] 
+[INFO] [amlb.print:07:01:48.794] INFO:__main__:Environment: environ({'AMLB_PATH': '/home/administrator/nil/automlbenchmark/amlb', 'PATH': '/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin:/home/administrator/.local/bin:/home/administrator/anaconda3/bin:/home/administrator/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PWD': '/home/administrator/nil/automlbenchmark', 'PYTHONPATH': '/home/administrator/nil/automlbenchmark', 'LC_CTYPE': 'C.UTF-8', 'JOBLIB_TEMP_FOLDER': '/tmp', 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1', 'KMP_INIT_AT_FORK': 'FALSE', 'KMP_DUPLICATE_LIB_OK': 'True'})
+[INFO] [amlb.print:07:01:48.794] 
+[INFO] [amlb.print:07:01:48.795] INFO:__main__:Using 4845.25MB memory per job and on a total of 12 jobs.
+[INFO] [amlb.print:07:01:48.795] 
+[INFO] [amlb.print:07:01:48.795] WARNING:__main__:Using meta-learned initialization, which might be bad (leakage).
+[INFO] [amlb.print:07:01:48.795] 
+[INFO] [amlb.print:07:01:48.795] INFO:__main__:Auto-sklearn constructor arguments: {'metric': log_loss, 'time_left_for_this_task': 3600, 'n_jobs': 12, 'seed': 535651439}
+[INFO] [amlb.print:07:01:48.795] 
+[INFO] [amlb.print:07:01:48.795] INFO:__main__:Auto-sklearn additional constructor arguments: {}
+[INFO] [amlb.print:07:01:48.796] 
+[INFO] [amlb.print:07:01:48.796] INFO:__main__:Auto-sklearn fit() arguments: {'dataset_name': 'Covertype'}
+[INFO] [amlb.print:07:01:48.796] 
+[INFO] [amlb.print:07:01:48.796] 
+[INFO] [amlb.print:07:01:48.796] 
+[INFO] [amlb.results:07:01:49.172] Predictions preview:
+            1         2             3             4             5             6             7 predictions truth
+0   0.012945  0.987016  2.321025e-06  9.813478e-09  1.991263e-05  1.044083e-06  1.591105e-05           2     2
+1   0.092036  0.907833  5.450328e-07  1.950509e-08  1.233659e-04  2.321621e-07  5.877557e-06           2     2
+2   0.018629  0.981367  6.884590e-07  9.256542e-09  1.390742e-06  4.468848e-07  1.077555e-06           2     2
+3   0.116400  0.883586  5.016436e-06  2.132858e-08  1.176169e-06  2.366852e-06  5.834716e-06           2     2
+4   0.059190  0.940800  7.484217e-07  7.803433e-09  8.437044e-06  4.709222e-07  2.251306e-07           2     2
+5   0.189953  0.798865  1.994051e-06  7.946120e-07  4.906386e-06  5.891080e-06  1.116775e-02           2     2
+6   0.884208  0.115784  3.003315e-07  2.028710e-08  1.637428e-06  9.450809e-07  5.231574e-06           1     2
+7   0.034172  0.965784  3.925633e-07  7.820636e-09  4.031801e-05  2.698753e-07  3.355920e-06           2     2
+8   0.003948  0.992823  7.676434e-05  6.348537e-08  2.551324e-04  2.894875e-03  1.988045e-06           2     2
+9   0.554235  0.445395  1.433965e-06  7.024182e-09  3.577546e-04  5.626082e-06  4.948565e-06           1     2
+10  0.064822  0.934800  4.914894e-07  2.492022e-07  3.520616e-04  3.662108e-06  2.134209e-05           2     2
+11  0.001926  0.034885  1.969447e-05  6.689557e-09  5.619352e-05  9.631115e-01  1.828337e-06           6     2
+12  0.030068  0.969897  4.565608e-07  4.814067e-08  2.685703e-05  2.999741e-07  7.659735e-06           2     2
+13  0.028432  0.971538  8.399807e-07  4.232530e-09  2.269637e-05  9.942094e-07  5.156471e-06           2     2
+14  0.085434  0.914560  3.861374e-07  5.500590e-09  1.083841e-06  2.829564e-07  4.379107e-06           2     2
+15  0.073297  0.926696  7.819871e-07  1.927152e-08  8.577223e-07  3.760881e-07  5.192880e-06           2     2
+16  0.003514  0.994228  1.124096e-03  2.983220e-08  9.443032e-04  1.882270e-04  1.618853e-06           2     2
+17  0.038225  0.961770  3.727917e-07  7.814697e-09  2.658979e-06  3.486740e-07  1.155252e-06           2     2
+18  0.032044  0.967948  3.949442e-07  4.281616e-08  1.281553e-06  3.171949e-07  6.131767e-06           2     2
+19  0.004041  0.995928  8.011080e-06  9.769734e-09  2.189580e-05  1.324073e-06  2.267696e-07           2     2
+
+[INFO] [amlb.results:07:01:50.508] Predictions saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/2/predictions.csv`.
+[INFO] [amlb.results:07:01:50.556] Loading metadata from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/2/metadata.json`.
+[INFO] [amlb.results:07:01:50.556] Loading predictions from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/2/predictions.csv`.
+[INFO] [amlb.results:07:01:51.382] Metric scores: { 'acc': 0.9195022460887076,
+  'app_version': 'dev [master, 54881a2]',
+  'balacc': 0.9042517739675564,
+  'constraint': '1h12c',
+  'duration': nan,
+  'fold': 2,
+  'framework': 'autosklearn',
+  'id': 'openml.org/t/7593',
+  'info': None,
+  'logloss': 0.2043138441631338,
+  'metric': 'logloss',
+  'mode': 'local',
+  'models_count': 3,
+  'params': '',
+  'predict_duration': 31.373512268066406,
+  'result': 0.2043138441631338,
+  'seed': 535651439,
+  'task': 'Covertype',
+  'training_duration': 3603.1203050613403,
+  'utc': '2021-02-02T07:01:50',
+  'version': '0.12.1'}
+[INFO] [amlb.job:07:01:51.392] Job local.covertype.1h12c.Covertype.2.autosklearn executed in 3739.081 seconds.
+[INFO] [amlb.job:07:01:51.392] 
+-----------------------------------------------------------
+Starting job local.covertype.1h12c.Covertype.3.autosklearn.
+[INFO] [amlb.benchmark:07:01:51.957] Assigning 12 cores (total=12) for new task Covertype.
+[INFO] [amlb.benchmark:07:01:51.958] Assigning 58112 MB (total=64324 MB) for new Covertype task.
+[INFO] [amlb.benchmark:07:01:51.958] Running task Covertype on framework autosklearn with config:
+TaskConfig(framework='autosklearn', framework_params={}, framework_version='stable', type='classification', name='Covertype', fold=3, metrics=['logloss', 'acc', 'balacc'], metric='logloss', seed=535651440, max_runtime_seconds=3600, cores=12, max_mem_size_mb=58112, min_vol_size_mb=16384, input_dir='/home/administrator/.openml/cache', output_dir='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448', output_predictions_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/3/predictions.csv', ext={}, output_metadata_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/3/metadata.json')
+[INFO] [amlb.utils.process:07:02:50.807] [513063] CPU Utilization: 8.3%
+[INFO] [amlb.utils.process:07:02:50.807] [513063] Memory Usage: 6.9%
+[INFO] [amlb.utils.process:07:02:50.808] [513063] Disk Usage: 65.1%
+[INFO] [amlb.utils.process:07:02:57.711] Running cmd `/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin/python -W ignore /home/administrator/nil/automlbenchmark/frameworks/autosklearn/exec.py`
+[INFO] [amlb.print:07:02:59.679] INFO:__main__:
+[INFO] [amlb.print:07:02:59.680] **** Auto-sklearn [v0.12.1]****
+[INFO] [amlb.print:07:02:59.680] 
+[INFO] [amlb.print:07:02:59.680] INFO:__main__:Running Auto-sklearn for Covertype with a maximum time of 3600s on 12 cores with 58112MB, optimizing log_loss.
+[INFO] [amlb.print:07:02:59.680] INFO:__main__:Environment: environ({'AMLB_PATH': '/home/administrator/nil/automlbenchmark/amlb', 'PATH': '/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin:/home/administrator/.local/bin:/home/administrator/anaconda3/bin:/home/administrator/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PWD': '/home/administrator/nil/automlbenchmark', 'PYTHONPATH': '/home/administrator/nil/automlbenchmark', 'LC_CTYPE': 'C.UTF-8', 'JOBLIB_TEMP_FOLDER': '/tmp', 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1', 'KMP_INIT_AT_FORK': 'FALSE', 'KMP_DUPLICATE_LIB_OK': 'True'})
+[INFO] [amlb.print:07:02:59.680] INFO:__main__:Using 4842.666666666667MB memory per job and on a total of 12 jobs.
+[INFO] [amlb.print:07:02:59.680] WARNING:__main__:Using meta-learned initialization, which might be bad (leakage).
+[INFO] [amlb.print:07:02:59.680] INFO:__main__:Auto-sklearn constructor arguments: {'metric': log_loss, 'time_left_for_this_task': 3600, 'n_jobs': 12, 'seed': 535651440}
+[INFO] [amlb.print:07:02:59.681] INFO:__main__:Auto-sklearn additional constructor arguments: {}
+[INFO] [amlb.print:07:02:59.681] INFO:__main__:Auto-sklearn fit() arguments: {'dataset_name': 'Covertype'}
+[INFO] [amlb.print:07:02:59.765] { 'predictors_type': [ 'Numerical',
+[INFO] [amlb.print:07:03:15.475]                        'Numerical',
+[INFO] [amlb.print:07:03:15.475]                        'Numerical',
+[INFO] [amlb.print:07:03:15.476]                        'Numerical',
+[INFO] [amlb.print:07:03:15.476]                        'Numerical',
+[INFO] [amlb.print:07:03:15.476]                        'Numerical',
+[INFO] [amlb.print:07:03:15.476]                        'Numerical',
+[INFO] [amlb.print:07:03:15.476]                        'Numerical',
+[INFO] [amlb.print:07:03:15.476]                        'Numerical',
+[INFO] [amlb.print:07:03:15.477]                        'Numerical',
+[INFO] [amlb.print:07:03:15.477]                        'Categorical',
+[INFO] [amlb.print:07:03:15.477]                        'Categorical',
+[INFO] [amlb.print:07:03:15.477]                        'Categorical',
+[INFO] [amlb.print:07:03:15.477]                        'Categorical',
+[INFO] [amlb.print:07:03:15.477]                        'Categorical',
+[INFO] [amlb.print:07:03:15.477]                        'Categorical',
+[INFO] [amlb.print:07:03:15.478]                        'Categorical',
+[INFO] [amlb.print:07:03:15.478]                        'Categorical',
+[INFO] [amlb.print:07:03:15.478]                        'Categorical',
+[INFO] [amlb.print:07:03:15.478]                        'Categorical',
+[INFO] [amlb.print:07:03:15.478]                        'Categorical',
+[INFO] [amlb.print:07:03:15.478]                        'Categorical',
+[INFO] [amlb.print:07:03:15.478]                        'Categorical',
+[INFO] [amlb.print:07:03:15.479]                        'Categorical',
+[INFO] [amlb.print:07:03:15.479]                        'Categorical',
+[INFO] [amlb.print:07:03:15.479]                        'Categorical',
+[INFO] [amlb.print:07:03:15.479]                        'Categorical',
+[INFO] [amlb.print:07:03:15.479]                        'Categorical',
+[INFO] [amlb.print:07:03:15.479]                        'Categorical',
+[INFO] [amlb.print:07:03:15.479]                        'Categorical',
+[INFO] [amlb.print:07:03:15.480]                        'Categorical',
+[INFO] [amlb.print:07:03:15.480]                        'Categorical',
+[INFO] [amlb.print:07:03:15.480]                        'Categorical',
+[INFO] [amlb.print:07:03:15.480]                        'Categorical',
+[INFO] [amlb.print:07:03:15.480]                        'Categorical',
+[INFO] [amlb.print:07:03:15.480]                        'Categorical',
+[INFO] [amlb.print:07:03:15.480]                        'Categorical',
+[INFO] [amlb.print:07:03:15.481]                        'Categorical',
+[INFO] [amlb.print:07:03:15.481]                        'Categorical',
+[INFO] [amlb.print:07:03:15.481]                        'Categorical',
+[INFO] [amlb.print:07:03:15.481]                        'Categorical',
+[INFO] [amlb.print:07:03:15.481]                        'Categorical',
+[INFO] [amlb.print:07:03:15.481]                        'Categorical',
+[INFO] [amlb.print:07:03:15.481]                        'Categorical',
+[INFO] [amlb.print:07:03:15.482]                        'Categorical',
+[INFO] [amlb.print:07:03:15.482]                        'Categorical',
+[INFO] [amlb.print:07:03:15.482]                        'Categorical',
+[INFO] [amlb.print:07:03:15.482]                        'Categorical',
+[INFO] [amlb.print:07:03:15.482]                        'Categorical',
+[INFO] [amlb.print:07:03:15.482]                        'Categorical',
+[INFO] [amlb.print:07:03:15.482]                        'Categorical',
+[INFO] [amlb.print:07:03:15.483]                        'Categorical',
+[INFO] [amlb.print:07:03:15.483]                        'Categorical',
+[INFO] [amlb.print:07:03:15.483]                        'Categorical'],
+[INFO] [amlb.print:07:03:15.483]   'test': { 'X_enc': '/tmp/tmpcglpmgvu/test.X_enc.npy',
+[INFO] [amlb.print:07:03:15.483]             'y_enc': '/tmp/tmpcglpmgvu/test.y_enc.npy'},
+[INFO] [amlb.print:07:03:15.484]   'train': { 'X_enc': '/tmp/tmpcglpmgvu/train.X_enc.npy',
+[INFO] [amlb.print:07:03:15.484]              'y_enc': '/tmp/tmpcglpmgvu/train.y_enc.npy'}}
+[INFO] [amlb.print:07:03:15.484] [WARNING] [2021-02-02 07:03:15,474:Client-AutoML(535651440):Covertype] Time limit for a single run is higher than total time limit. Capping the limit for a single run to the total time given to SMAC (3592.632805)
+[INFO] [amlb.print:07:03:17.062] [WARNING] [2021-02-02 07:03:15,474:Client-AutoML(535651440):Covertype] Capping the per_run_time_limit to 1796.0 to have time for a least 2 models in each process.
+[INFO] [amlb.print:07:03:17.062] [WARNING] [2021-02-02 07:03:17,061:Client-AutoMLSMBO(535651440)::Covertype] Could not find runs for instance cifar_10
+[INFO] [amlb.print:07:03:17.068] [WARNING] [2021-02-02 07:03:17,068:Client-AutoMLSMBO(535651440)::Covertype] Could not find runs for instance gtsrb-hog03
+[INFO] [amlb.print:07:03:17.072] [WARNING] [2021-02-02 07:03:17,072:Client-AutoMLSMBO(535651440)::Covertype] Could not find runs for instance kuzushiji-49
+[INFO] [amlb.print:07:03:17.084] [WARNING] [2021-02-02 07:03:17,084:Client-AutoMLSMBO(535651440)::Covertype] Could not find runs for instance svhn
+[INFO] [amlb.print:07:03:17.222] [WARNING] [2021-02-02 07:03:17,221:Client-AutoMLSMBO(535651440)::Covertype] Found no best configuration for instance kuzushiji-49
+[INFO] [amlb.print:07:03:17.222] [WARNING] [2021-02-02 07:03:17,222:Client-AutoMLSMBO(535651440)::Covertype] Found no best configuration for instance svhn
+[INFO] [amlb.print:07:03:17.223] [WARNING] [2021-02-02 07:03:17,222:Client-AutoMLSMBO(535651440)::Covertype] Found no best configuration for instance cifar_10
+[INFO] [amlb.print:07:03:17.223] [WARNING] [2021-02-02 07:03:17,222:Client-AutoMLSMBO(535651440)::Covertype] Found no best configuration for instance gtsrb-hog03
+[INFO] [amlb.utils.process:07:04:50.879] [513063] CPU Utilization: 80.9%
+[INFO] [amlb.utils.process:07:04:50.885] [513063] Memory Usage: 29.8%
+[INFO] [amlb.utils.process:07:04:50.887] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:06:50.916] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:06:50.941] [513063] Memory Usage: 32.6%
+[INFO] [amlb.utils.process:07:06:50.941] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:08:50.951] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:07:08:50.954] [513063] Memory Usage: 31.2%
+[INFO] [amlb.utils.process:07:08:50.955] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:10:50.961] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:10:50.966] [513063] Memory Usage: 32.6%
+[INFO] [amlb.utils.process:07:10:50.966] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:12:50.979] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:12:50.981] [513063] Memory Usage: 31.3%
+[INFO] [amlb.utils.process:07:12:50.982] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:14:50.995] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:14:51.086] [513063] Memory Usage: 32.1%
+[INFO] [amlb.utils.process:07:14:51.088] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:16:51.096] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:16:51.099] [513063] Memory Usage: 32.4%
+[INFO] [amlb.utils.process:07:16:51.099] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:18:51.107] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:18:51.113] [513063] Memory Usage: 33.5%
+[INFO] [amlb.utils.process:07:18:51.114] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:20:51.122] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:20:51.128] [513063] Memory Usage: 33.6%
+[INFO] [amlb.utils.process:07:20:51.129] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:22:51.132] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:07:22:51.134] [513063] Memory Usage: 28.6%
+[INFO] [amlb.utils.process:07:22:51.134] [513063] Disk Usage: 66.0%
+[INFO] [amlb.utils.process:07:24:51.138] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:24:51.143] [513063] Memory Usage: 28.8%
+[INFO] [amlb.utils.process:07:24:51.144] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:07:26:51.148] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:26:51.150] [513063] Memory Usage: 30.1%
+[INFO] [amlb.utils.process:07:26:51.150] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:07:28:51.154] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:28:51.158] [513063] Memory Usage: 30.7%
+[INFO] [amlb.utils.process:07:28:51.159] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:07:30:51.164] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:30:51.168] [513063] Memory Usage: 26.7%
+[INFO] [amlb.utils.process:07:30:51.168] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:07:32:51.172] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:32:51.174] [513063] Memory Usage: 27.8%
+[INFO] [amlb.utils.process:07:32:51.175] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:07:34:51.182] [513063] CPU Utilization: 98.6%
+[INFO] [amlb.utils.process:07:34:51.186] [513063] Memory Usage: 25.9%
+[INFO] [amlb.utils.process:07:34:51.186] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:07:36:51.193] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:36:51.197] [513063] Memory Usage: 25.1%
+[INFO] [amlb.utils.process:07:36:51.197] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:07:38:51.201] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:07:38:51.202] [513063] Memory Usage: 26.5%
+[INFO] [amlb.utils.process:07:38:51.202] [513063] Disk Usage: 66.3%
+[INFO] [amlb.utils.process:07:40:51.205] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:40:51.205] [513063] Memory Usage: 25.6%
+[INFO] [amlb.utils.process:07:40:51.206] [513063] Disk Usage: 66.3%
+[INFO] [amlb.print:07:41:33.262] init_dgesdd failed init
+[INFO] [amlb.utils.process:07:42:51.211] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:42:51.217] [513063] Memory Usage: 25.7%
+[INFO] [amlb.utils.process:07:42:51.217] [513063] Disk Usage: 66.3%
+[INFO] [amlb.utils.process:07:44:51.221] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:44:51.222] [513063] Memory Usage: 25.8%
+[INFO] [amlb.utils.process:07:44:51.222] [513063] Disk Usage: 66.4%
+[INFO] [amlb.utils.process:07:46:51.226] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:46:51.227] [513063] Memory Usage: 27.1%
+[INFO] [amlb.utils.process:07:46:51.227] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:07:48:51.233] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:48:51.236] [513063] Memory Usage: 27.9%
+[INFO] [amlb.utils.process:07:48:51.236] [513063] Disk Usage: 66.6%
+[INFO] [amlb.utils.process:07:50:51.248] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:50:51.252] [513063] Memory Usage: 28.0%
+[INFO] [amlb.utils.process:07:50:51.253] [513063] Disk Usage: 66.7%
+[INFO] [amlb.utils.process:07:52:51.256] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:52:51.259] [513063] Memory Usage: 28.7%
+[INFO] [amlb.utils.process:07:52:51.259] [513063] Disk Usage: 66.8%
+[INFO] [amlb.utils.process:07:54:51.262] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:07:54:51.263] [513063] Memory Usage: 28.4%
+[INFO] [amlb.utils.process:07:54:51.263] [513063] Disk Usage: 66.8%
+[INFO] [amlb.utils.process:07:56:51.267] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:56:51.269] [513063] Memory Usage: 30.2%
+[INFO] [amlb.utils.process:07:56:51.269] [513063] Disk Usage: 66.9%
+[INFO] [amlb.utils.process:07:58:51.274] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:07:58:51.277] [513063] Memory Usage: 30.6%
+[INFO] [amlb.utils.process:07:58:51.277] [513063] Disk Usage: 66.9%
+[INFO] [amlb.utils.process:08:00:51.281] [513063] CPU Utilization: 98.8%
+[INFO] [amlb.utils.process:08:00:51.283] [513063] Memory Usage: 30.4%
+[INFO] [amlb.utils.process:08:00:51.283] [513063] Disk Usage: 66.9%
+[INFO] [amlb.utils.process:08:02:51.292] [513063] CPU Utilization: 99.6%
+[INFO] [amlb.utils.process:08:02:51.304] [513063] Memory Usage: 32.1%
+[INFO] [amlb.utils.process:08:02:51.304] [513063] Disk Usage: 66.9%
+[INFO] [amlb.print:08:04:02.717] 
+[INFO] [amlb.print:08:04:02.718] 
+[INFO] [amlb.print:08:04:02.718] 
+[INFO] [amlb.results:08:04:03.011] Predictions preview:
+            1         2             3             4             5             6             7 predictions truth
+0   0.076843  0.918846  1.035013e-05  8.637710e-07  5.308393e-06  9.683738e-06  4.285469e-03           2     2
+1   0.006736  0.993262  4.029771e-07  6.613645e-08  8.199863e-07  3.730495e-07  7.225736e-07           2     2
+2   0.145191  0.854092  6.560403e-06  1.493747e-06  6.753468e-04  5.880426e-06  2.800717e-05           2     2
+3   0.002071  0.997868  3.426501e-06  8.673757e-08  3.965629e-05  1.690717e-05  4.810187e-07           2     2
+4   0.005241  0.994695  8.264737e-07  3.940543e-08  1.424607e-05  3.933883e-07  4.840186e-05           2     2
+5   0.016776  0.978338  7.098409e-05  8.339399e-07  4.580683e-03  2.292103e-04  4.206136e-06           2     2
+6   0.001451  0.994482  1.324415e-05  4.867608e-07  6.625661e-04  3.384959e-03  5.227468e-06           2     2
+7   0.000087  0.999677  1.908637e-06  2.339334e-07  2.321842e-04  5.729369e-07  1.177619e-06           2     2
+8   0.018474  0.981440  9.784141e-06  9.591472e-07  3.662256e-05  3.438744e-05  3.950542e-06           2     2
+9   0.002396  0.996937  9.118523e-07  4.810339e-08  6.648951e-04  2.482209e-07  1.054030e-06           2     2
+10  0.032050  0.912384  6.007270e-05  1.881402e-05  5.520833e-02  6.092602e-05  2.169886e-04           2     2
+11  0.002761  0.997237  2.782899e-07  1.153717e-07  6.523623e-07  2.056687e-07  5.627038e-07           2     2
+12  0.002671  0.997328  1.972717e-07  7.955610e-08  4.375336e-07  1.270516e-07  5.948942e-07           2     2
+13  0.031104  0.966879  2.075460e-05  8.272751e-07  1.392065e-03  5.981844e-04  4.496493e-06           2     2
+14  0.030535  0.969286  2.754491e-06  1.969606e-07  1.618378e-04  1.141698e-05  3.388286e-06           2     2
+15  0.018880  0.981046  1.395406e-06  3.301273e-07  3.937936e-06  1.102738e-06  6.704259e-05           2     2
+16  0.000116  0.999194  8.685125e-07  5.534234e-08  6.890252e-04  3.643789e-07  2.303989e-07           2     2
+17  0.002432  0.997567  1.873852e-07  4.106340e-08  8.471690e-07  1.469352e-07  3.410104e-07           2     2
+18  0.034770  0.955937  2.415918e-06  6.887362e-07  9.282996e-03  2.773266e-06  4.423117e-06           2     2
+19  0.001179  0.998820  1.365891e-07  2.263289e-08  5.117283e-07  1.326857e-07  7.469949e-07           2     2
+
+[INFO] [amlb.results:08:04:04.255] Predictions saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/3/predictions.csv`.
+[INFO] [amlb.results:08:04:04.306] Loading metadata from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/3/metadata.json`.
+[INFO] [amlb.results:08:04:04.306] Loading predictions from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/3/predictions.csv`.
+[INFO] [amlb.results:08:04:05.149] Metric scores: { 'acc': 0.9392953649679007,
+  'app_version': 'dev [master, 54881a2]',
+  'balacc': 0.8853845881019607,
+  'constraint': '1h12c',
+  'duration': nan,
+  'fold': 3,
+  'framework': 'autosklearn',
+  'id': 'openml.org/t/7593',
+  'info': None,
+  'logloss': 0.15877075689086873,
+  'metric': 'logloss',
+  'mode': 'local',
+  'models_count': 2,
+  'params': '',
+  'predict_duration': 24.155651092529297,
+  'result': 0.15877075689086873,
+  'seed': 535651440,
+  'task': 'Covertype',
+  'training_duration': 3613.924689769745,
+  'utc': '2021-02-02T08:04:04',
+  'version': '0.12.1'}
+[INFO] [amlb.job:08:04:05.162] Job local.covertype.1h12c.Covertype.3.autosklearn executed in 3733.769 seconds.
+[INFO] [amlb.job:08:04:05.163] 
+-----------------------------------------------------------
+Starting job local.covertype.1h12c.Covertype.4.autosklearn.
+[INFO] [amlb.benchmark:08:04:05.762] Assigning 12 cores (total=12) for new task Covertype.
+[INFO] [amlb.benchmark:08:04:05.762] Assigning 58087 MB (total=64324 MB) for new Covertype task.
+[INFO] [amlb.benchmark:08:04:05.763] Running task Covertype on framework autosklearn with config:
+TaskConfig(framework='autosklearn', framework_params={}, framework_version='stable', type='classification', name='Covertype', fold=4, metrics=['logloss', 'acc', 'balacc'], metric='logloss', seed=535651441, max_runtime_seconds=3600, cores=12, max_mem_size_mb=58087, min_vol_size_mb=16384, input_dir='/home/administrator/.openml/cache', output_dir='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448', output_predictions_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/4/predictions.csv', ext={}, output_metadata_file='/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/4/metadata.json')
+[INFO] [amlb.utils.process:08:04:51.373] [513063] CPU Utilization: 11.1%
+[INFO] [amlb.utils.process:08:04:51.640] [513063] Memory Usage: 7.8%
+[INFO] [amlb.utils.process:08:04:51.640] [513063] Disk Usage: 65.1%
+[INFO] [amlb.utils.process:08:05:12.218] Running cmd `/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin/python -W ignore /home/administrator/nil/automlbenchmark/frameworks/autosklearn/exec.py`
+[INFO] [amlb.print:08:05:14.078] INFO:__main__:
+[INFO] [amlb.print:08:05:14.079] **** Auto-sklearn [v0.12.1]****
+[INFO] [amlb.print:08:05:14.079] 
+[INFO] [amlb.print:08:05:14.079] INFO:__main__:Running Auto-sklearn for Covertype with a maximum time of 3600s on 12 cores with 58087MB, optimizing log_loss.
+[INFO] [amlb.print:08:05:14.165] { 'predictors_type': [ 'Numerical',
+[INFO] [amlb.print:08:05:31.378]                        'Numerical',
+[INFO] [amlb.print:08:05:31.379]                        'Numerical',
+[INFO] [amlb.print:08:05:31.379]                        'Numerical',
+[INFO] [amlb.print:08:05:31.379]                        'Numerical',
+[INFO] [amlb.print:08:05:31.379]                        'Numerical',
+[INFO] [amlb.print:08:05:31.379]                        'Numerical',
+[INFO] [amlb.print:08:05:31.379]                        'Numerical',
+[INFO] [amlb.print:08:05:31.380]                        'Numerical',
+[INFO] [amlb.print:08:05:31.380]                        'Numerical',
+[INFO] [amlb.print:08:05:31.380]                        'Categorical',
+[INFO] [amlb.print:08:05:31.380]                        'Categorical',
+[INFO] [amlb.print:08:05:31.380]                        'Categorical',
+[INFO] [amlb.print:08:05:31.380]                        'Categorical',
+[INFO] [amlb.print:08:05:31.380]                        'Categorical',
+[INFO] [amlb.print:08:05:31.381]                        'Categorical',
+[INFO] [amlb.print:08:05:31.381]                        'Categorical',
+[INFO] [amlb.print:08:05:31.381]                        'Categorical',
+[INFO] [amlb.print:08:05:31.381]                        'Categorical',
+[INFO] [amlb.print:08:05:31.381]                        'Categorical',
+[INFO] [amlb.print:08:05:31.381]                        'Categorical',
+[INFO] [amlb.print:08:05:31.381]                        'Categorical',
+[INFO] [amlb.print:08:05:31.382]                        'Categorical',
+[INFO] [amlb.print:08:05:31.382]                        'Categorical',
+[INFO] [amlb.print:08:05:31.382]                        'Categorical',
+[INFO] [amlb.print:08:05:31.382]                        'Categorical',
+[INFO] [amlb.print:08:05:31.382]                        'Categorical',
+[INFO] [amlb.print:08:05:31.382]                        'Categorical',
+[INFO] [amlb.print:08:05:31.382]                        'Categorical',
+[INFO] [amlb.print:08:05:31.383]                        'Categorical',
+[INFO] [amlb.print:08:05:31.383]                        'Categorical',
+[INFO] [amlb.print:08:05:31.383]                        'Categorical',
+[INFO] [amlb.print:08:05:31.383]                        'Categorical',
+[INFO] [amlb.print:08:05:31.383]                        'Categorical',
+[INFO] [amlb.print:08:05:31.383]                        'Categorical',
+[INFO] [amlb.print:08:05:31.384]                        'Categorical',
+[INFO] [amlb.print:08:05:31.384]                        'Categorical',
+[INFO] [amlb.print:08:05:31.384]                        'Categorical',
+[INFO] [amlb.print:08:05:31.384]                        'Categorical',
+[INFO] [amlb.print:08:05:31.384]                        'Categorical',
+[INFO] [amlb.print:08:05:31.384]                        'Categorical',
+[INFO] [amlb.print:08:05:31.384]                        'Categorical',
+[INFO] [amlb.print:08:05:31.385]                        'Categorical',
+[INFO] [amlb.print:08:05:31.385]                        'Categorical',
+[INFO] [amlb.print:08:05:31.385]                        'Categorical',
+[INFO] [amlb.print:08:05:31.385]                        'Categorical',
+[INFO] [amlb.print:08:05:31.385]                        'Categorical',
+[INFO] [amlb.print:08:05:31.385]                        'Categorical',
+[INFO] [amlb.print:08:05:31.385]                        'Categorical',
+[INFO] [amlb.print:08:05:31.386]                        'Categorical',
+[INFO] [amlb.print:08:05:31.386]                        'Categorical',
+[INFO] [amlb.print:08:05:31.386]                        'Categorical',
+[INFO] [amlb.print:08:05:31.386]                        'Categorical',
+[INFO] [amlb.print:08:05:31.386]                        'Categorical'],
+[INFO] [amlb.print:08:05:31.386]   'test': { 'X_enc': '/tmp/tmpuqn5yv9f/test.X_enc.npy',
+[INFO] [amlb.print:08:05:31.386]             'y_enc': '/tmp/tmpuqn5yv9f/test.y_enc.npy'},
+[INFO] [amlb.print:08:05:31.387]   'train': { 'X_enc': '/tmp/tmpuqn5yv9f/train.X_enc.npy',
+[INFO] [amlb.print:08:05:31.387]              'y_enc': '/tmp/tmpuqn5yv9f/train.y_enc.npy'}}
+[INFO] [amlb.print:08:05:31.387] [WARNING] [2021-02-02 08:05:31,378:Client-AutoML(535651441):Covertype] Time limit for a single run is higher than total time limit. Capping the limit for a single run to the total time given to SMAC (3592.797642)
+[INFO] [amlb.print:08:05:33.014] [WARNING] [2021-02-02 08:05:31,378:Client-AutoML(535651441):Covertype] Capping the per_run_time_limit to 1796.0 to have time for a least 2 models in each process.
+[INFO] [amlb.print:08:05:33.015] [WARNING] [2021-02-02 08:05:33,013:Client-AutoMLSMBO(535651441)::Covertype] Could not find runs for instance cifar_10
+[INFO] [amlb.print:08:05:33.020] [WARNING] [2021-02-02 08:05:33,020:Client-AutoMLSMBO(535651441)::Covertype] Could not find runs for instance gtsrb-hog03
+[INFO] [amlb.print:08:05:33.023] [WARNING] [2021-02-02 08:05:33,023:Client-AutoMLSMBO(535651441)::Covertype] Could not find runs for instance kuzushiji-49
+[INFO] [amlb.print:08:05:33.034] [WARNING] [2021-02-02 08:05:33,033:Client-AutoMLSMBO(535651441)::Covertype] Could not find runs for instance svhn
+[INFO] [amlb.print:08:05:33.166] [WARNING] [2021-02-02 08:05:33,165:Client-AutoMLSMBO(535651441)::Covertype] Found no best configuration for instance kuzushiji-49
+[INFO] [amlb.print:08:05:33.166] [WARNING] [2021-02-02 08:05:33,165:Client-AutoMLSMBO(535651441)::Covertype] Found no best configuration for instance svhn
+[INFO] [amlb.print:08:05:33.166] [WARNING] [2021-02-02 08:05:33,166:Client-AutoMLSMBO(535651441)::Covertype] Found no best configuration for instance cifar_10
+[INFO] [amlb.print:08:05:33.166] [WARNING] [2021-02-02 08:05:33,166:Client-AutoMLSMBO(535651441)::Covertype] Found no best configuration for instance gtsrb-hog03
+[INFO] [amlb.utils.process:08:06:51.652] [513063] CPU Utilization: 69.1%
+[INFO] [amlb.utils.process:08:06:51.672] [513063] Memory Usage: 29.7%
+[INFO] [amlb.utils.process:08:06:51.673] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:08:51.708] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:08:51.772] [513063] Memory Usage: 32.2%
+[INFO] [amlb.utils.process:08:08:51.774] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:10:51.791] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:08:10:51.829] [513063] Memory Usage: 31.2%
+[INFO] [amlb.utils.process:08:10:51.830] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:12:51.839] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:12:51.844] [513063] Memory Usage: 32.3%
+[INFO] [amlb.utils.process:08:12:51.845] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:14:51.860] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:14:51.910] [513063] Memory Usage: 30.8%
+[INFO] [amlb.utils.process:08:14:51.910] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:16:51.914] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:16:51.918] [513063] Memory Usage: 30.9%
+[INFO] [amlb.utils.process:08:16:51.919] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:18:51.926] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:18:51.931] [513063] Memory Usage: 32.7%
+[INFO] [amlb.utils.process:08:18:51.931] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:20:51.938] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:20:51.941] [513063] Memory Usage: 34.3%
+[INFO] [amlb.utils.process:08:20:51.942] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:22:51.955] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:22:51.971] [513063] Memory Usage: 35.7%
+[INFO] [amlb.utils.process:08:22:51.973] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:24:51.976] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:08:24:51.977] [513063] Memory Usage: 30.8%
+[INFO] [amlb.utils.process:08:24:51.977] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:26:51.981] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:26:51.983] [513063] Memory Usage: 28.6%
+[INFO] [amlb.utils.process:08:26:51.985] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:28:51.991] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:28:51.995] [513063] Memory Usage: 28.1%
+[INFO] [amlb.utils.process:08:28:51.995] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:30:52.001] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:30:52.004] [513063] Memory Usage: 28.5%
+[INFO] [amlb.utils.process:08:30:52.005] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:32:52.014] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:32:52.018] [513063] Memory Usage: 28.2%
+[INFO] [amlb.utils.process:08:32:52.019] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:34:52.023] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:34:52.024] [513063] Memory Usage: 28.3%
+[INFO] [amlb.utils.process:08:34:52.025] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:36:52.027] [513063] CPU Utilization: 96.3%
+[INFO] [amlb.utils.process:08:36:52.028] [513063] Memory Usage: 24.2%
+[INFO] [amlb.utils.process:08:36:52.028] [513063] Disk Usage: 66.1%
+[INFO] [amlb.utils.process:08:38:52.033] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:38:52.034] [513063] Memory Usage: 27.0%
+[INFO] [amlb.utils.process:08:38:52.035] [513063] Disk Usage: 66.2%
+[INFO] [amlb.utils.process:08:40:52.040] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:08:40:52.043] [513063] Memory Usage: 25.9%
+[INFO] [amlb.utils.process:08:40:52.044] [513063] Disk Usage: 66.5%
+[INFO] [amlb.utils.process:08:42:52.047] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:42:52.048] [513063] Memory Usage: 25.3%
+[INFO] [amlb.utils.process:08:42:52.048] [513063] Disk Usage: 66.7%
+[INFO] [amlb.utils.process:08:44:52.054] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:08:44:52.056] [513063] Memory Usage: 25.6%
+[INFO] [amlb.utils.process:08:44:52.057] [513063] Disk Usage: 66.7%
+[INFO] [amlb.utils.process:08:46:52.063] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:46:52.065] [513063] Memory Usage: 26.2%
+[INFO] [amlb.utils.process:08:46:52.065] [513063] Disk Usage: 66.8%
+[INFO] [amlb.utils.process:08:48:52.073] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:48:52.076] [513063] Memory Usage: 26.7%
+[INFO] [amlb.utils.process:08:48:52.077] [513063] Disk Usage: 66.8%
+[INFO] [amlb.utils.process:08:50:52.081] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:50:52.083] [513063] Memory Usage: 26.8%
+[INFO] [amlb.utils.process:08:50:52.088] [513063] Disk Usage: 66.9%
+[INFO] [amlb.utils.process:08:52:52.094] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:52:52.097] [513063] Memory Usage: 29.0%
+[INFO] [amlb.utils.process:08:52:52.097] [513063] Disk Usage: 67.0%
+[INFO] [amlb.utils.process:08:54:52.114] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:54:52.117] [513063] Memory Usage: 26.1%
+[INFO] [amlb.utils.process:08:54:52.117] [513063] Disk Usage: 67.1%
+[INFO] [amlb.utils.process:08:56:52.120] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:08:56:52.122] [513063] Memory Usage: 25.7%
+[INFO] [amlb.utils.process:08:56:52.122] [513063] Disk Usage: 67.1%
+[INFO] [amlb.utils.process:08:58:52.127] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:08:58:52.130] [513063] Memory Usage: 27.9%
+[INFO] [amlb.utils.process:08:58:52.130] [513063] Disk Usage: 67.7%
+[INFO] [amlb.utils.process:09:00:52.143] [513063] CPU Utilization: 99.9%
+[INFO] [amlb.utils.process:09:00:52.160] [513063] Memory Usage: 29.5%
+[INFO] [amlb.utils.process:09:00:52.162] [513063] Disk Usage: 67.1%
+[INFO] [amlb.utils.process:09:02:52.174] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:09:02:52.179] [513063] Memory Usage: 30.6%
+[INFO] [amlb.utils.process:09:02:52.190] [513063] Disk Usage: 67.1%
+[INFO] [amlb.utils.process:09:04:52.197] [513063] CPU Utilization: 100.0%
+[INFO] [amlb.utils.process:09:04:52.199] [513063] Memory Usage: 30.0%
+[INFO] [amlb.utils.process:09:04:52.199] [513063] Disk Usage: 67.1%
+[INFO] [amlb.print:09:06:01.716] 
+[INFO] [amlb.print:09:06:01.716] INFO:__main__:Environment: environ({'AMLB_PATH': '/home/administrator/nil/automlbenchmark/amlb', 'PATH': '/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin:/home/administrator/.local/bin:/home/administrator/anaconda3/bin:/home/administrator/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PWD': '/home/administrator/nil/automlbenchmark', 'PYTHONPATH': '/home/administrator/nil/automlbenchmark', 'LC_CTYPE': 'C.UTF-8', 'JOBLIB_TEMP_FOLDER': '/tmp', 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1', 'KMP_INIT_AT_FORK': 'FALSE', 'KMP_DUPLICATE_LIB_OK': 'True'})
+[INFO] [amlb.print:09:06:01.717] 
+[INFO] [amlb.print:09:06:01.717] INFO:__main__:Using 4840.583333333333MB memory per job and on a total of 12 jobs.
+[INFO] [amlb.print:09:06:01.717] 
+[INFO] [amlb.print:09:06:01.717] WARNING:__main__:Using meta-learned initialization, which might be bad (leakage).
+[INFO] [amlb.print:09:06:01.717] 
+[INFO] [amlb.print:09:06:01.717] INFO:__main__:Auto-sklearn constructor arguments: {'metric': log_loss, 'time_left_for_this_task': 3600, 'n_jobs': 12, 'seed': 535651441}
+[INFO] [amlb.print:09:06:01.717] 
+[INFO] [amlb.print:09:06:01.718] INFO:__main__:Auto-sklearn additional constructor arguments: {}
+[INFO] [amlb.print:09:06:01.718] 
+[INFO] [amlb.print:09:06:01.718] INFO:__main__:Auto-sklearn fit() arguments: {'dataset_name': 'Covertype'}
+[INFO] [amlb.print:09:06:01.718] 
+[INFO] [amlb.print:09:06:01.718] 
+[INFO] [amlb.print:09:06:01.718] 
+[INFO] [amlb.results:09:06:02.027] Predictions preview:
+            1         2         3         4         5         6         7 predictions truth
+0   0.054476  0.945089  0.000087  0.000085  0.000086  0.000086  0.000092           2     2
+1   0.027122  0.972728  0.000030  0.000029  0.000029  0.000029  0.000033           2     2
+2   0.005893  0.892657  0.083768  0.000077  0.017230  0.000298  0.000077           2     2
+3   0.065564  0.934138  0.000057  0.000056  0.000068  0.000057  0.000060           2     2
+4   0.300110  0.699188  0.000141  0.000136  0.000139  0.000141  0.000144           2     2
+5   0.223538  0.752790  0.000151  0.000126  0.023127  0.000145  0.000123           2     2
+6   0.346464  0.653232  0.000052  0.000052  0.000052  0.000052  0.000096           2     2
+7   0.045099  0.954554  0.000061  0.000055  0.000113  0.000063  0.000055           2     2
+8   0.127571  0.871588  0.000169  0.000164  0.000168  0.000167  0.000173           2     2
+9   0.106104  0.893291  0.000091  0.000090  0.000089  0.000091  0.000243           2     2
+10  0.253415  0.745882  0.000141  0.000135  0.000137  0.000139  0.000152           2     2
+11  0.026643  0.972942  0.000078  0.000074  0.000102  0.000076  0.000086           2     2
+12  0.414787  0.584539  0.000136  0.000131  0.000133  0.000134  0.000140           2     2
+13  0.071634  0.825269  0.005772  0.000819  0.091698  0.003984  0.000825           2     2
+14  0.119162  0.880462  0.000073  0.000069  0.000085  0.000069  0.000079           2     2
+15  0.099997  0.899275  0.000144  0.000140  0.000141  0.000144  0.000160           2     2
+16  0.228253  0.771271  0.000088  0.000088  0.000088  0.000088  0.000123           2     2
+17  0.004370  0.995419  0.000038  0.000030  0.000079  0.000035  0.000030           2     2
+18  0.003356  0.915445  0.033212  0.000177  0.019629  0.028002  0.000179           2     2
+19  0.105268  0.893832  0.000179  0.000174  0.000177  0.000179  0.000191           2     2
+
+[INFO] [amlb.results:09:06:03.322] Predictions saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/4/predictions.csv`.
+[INFO] [amlb.results:09:06:03.373] Loading metadata from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/4/metadata.json`.
+[INFO] [amlb.results:09:06:03.374] Loading predictions from `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/4/predictions.csv`.
+[INFO] [amlb.results:09:06:04.260] Metric scores: { 'acc': 0.9264728662157278,
+  'app_version': 'dev [master, 54881a2]',
+  'balacc': 0.9393893537355422,
+  'constraint': '1h12c',
+  'duration': nan,
+  'fold': 4,
+  'framework': 'autosklearn',
+  'id': 'openml.org/t/7593',
+  'info': None,
+  'logloss': 0.2236869176931852,
+  'metric': 'logloss',
+  'mode': 'local',
+  'models_count': 3,
+  'params': '',
+  'predict_duration': 15.454980850219727,
+  'result': 0.2236869176931852,
+  'seed': 535651441,
+  'task': 'Covertype',
+  'training_duration': 3615.1286838054657,
+  'utc': '2021-02-02T09:06:03',
+  'version': '0.12.1'}
+[INFO] [amlb.job:09:06:04.270] Job local.covertype.1h12c.Covertype.4.autosklearn executed in 3719.108 seconds.
+[INFO] [amlb.job:09:06:04.272] All jobs executed in 18675.250 seconds.
+[INFO] [amlb.utils.process:09:06:04.274] [513063] CPU Utilization: 31.8%
+[INFO] [amlb.utils.process:09:06:04.274] [513063] Memory Usage: 6.5%
+[INFO] [amlb.utils.process:09:06:04.274] [513063] Disk Usage: 65.1%
+[INFO] [amlb.benchmark:09:06:04.275] Processing results for autosklearn.covertype.1h12c.local.20210202T035448
+[INFO] [amlb.results:09:06:04.324] Scores saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/scores/autosklearn.benchmark_covertype.csv`.
+[INFO] [amlb.results:09:06:04.348] Scores saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/scores/results.csv`.
+[INFO] [amlb.results:09:06:04.381] Scores saved to `/home/administrator/nil/automlbenchmark/results/results.csv`.
+[INFO] [amlb.benchmark:09:06:04.421] Summing up scores for current run:
+                  id       task    framework constraint fold    result   metric   mode version params            app_version                  utc  duration  training_duration  predict_duration models_count       seed       acc    balacc   logloss
+0  openml.org/t/7593  Covertype  autosklearn      1h12c    0  0.268324  logloss  local  0.12.1         dev [master, 54881a2]  2021-02-02T04:57:26    3758.2             3613.8              35.2            2  535651437  0.897577  0.926241  0.268324
+1  openml.org/t/7593  Covertype  autosklearn      1h12c    1  0.211575  logloss  local  0.12.1         dev [master, 54881a2]  2021-02-02T05:59:31    3725.1             3612.4              19.7            1  535651438  0.925011  0.939377  0.211575
+2  openml.org/t/7593  Covertype  autosklearn      1h12c    2  0.204314  logloss  local  0.12.1         dev [master, 54881a2]  2021-02-02T07:01:50    3739.1             3603.1              31.4            3  535651439  0.919502  0.904252  0.204314
+3  openml.org/t/7593  Covertype  autosklearn      1h12c    3  0.158771  logloss  local  0.12.1         dev [master, 54881a2]  2021-02-02T08:04:04    3733.8             3613.9              24.2            2  535651440  0.939295  0.885385  0.158771
+4  openml.org/t/7593  Covertype  autosklearn      1h12c    4  0.223687  logloss  local  0.12.1         dev [master, 54881a2]  2021-02-02T09:06:03    3719.1             3615.1              15.5            3  535651441  0.926473  0.939389  0.223687

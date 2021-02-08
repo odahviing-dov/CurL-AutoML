@@ -1,0 +1,27 @@
+{
+    "framework": "autosklearn",
+    "framework_params": {},
+    "framework_version": "stable",
+    "type": "classification",
+    "name": "Covertype",
+    "fold": 1,
+    "metrics": [
+        "logloss",
+        "acc",
+        "balacc"
+    ],
+    "metric": "logloss",
+    "seed": 535651438,
+    "max_runtime_seconds": 3600,
+    "cores": 12,
+    "max_mem_size_mb": 58149,
+    "min_vol_size_mb": 16384,
+    "input_dir": "/home/administrator/.openml/cache",
+    "output_dir": "/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448",
+    "output_predictions_file": "/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/1/predictions.csv",
+    "ext": {},
+    "output_metadata_file": "/home/administrator/nil/automlbenchmark/results/autosklearn.covertype.1h12c.local.20210202T035448/predictions/Covertype/1/metadata.json",
+    "result_dir": "/tmp/tmpoygk2uqj",
+    "result_file": "/tmp/tmpoygk2uqj/tmpsny3bwa4",
+    "version": "0.12.1"
+}

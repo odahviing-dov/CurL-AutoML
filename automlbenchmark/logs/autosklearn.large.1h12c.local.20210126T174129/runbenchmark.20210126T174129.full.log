@@ -1,0 +1,19 @@
+[INFO] [amlb:17:41:29.503] Running `autosklearn` on `large` benchmarks in `local` mode.
+[INFO] [amlb.frameworks.definitions:17:41:29.582] Loading frameworks definitions from /home/administrator/nil/automlbenchmark/resources/frameworks.yaml.
+[INFO] [amlb.resources:17:41:29.700] Loading benchmark constraint definitions from /home/administrator/nil/automlbenchmark/resources/constraints.yaml.
+[INFO] [amlb.benchmarks.file:17:41:29.706] Loading benchmark definitions from /home/administrator/nil/automlbenchmark/resources/benchmarks/large.yaml.
+[INFO] [amlb.job:17:41:29.714] 
+------------------------------------------------------
+Starting job local.large.1h12c.Airlines.0.autosklearn.
+[INFO] [amlb.utils.process:17:41:29.714] [404610] CPU Utilization: 16.3%
+[INFO] [amlb.utils.process:17:41:29.715] [404610] Memory Usage: 6.3%
+[INFO] [amlb.utils.process:17:41:29.715] [404610] Disk Usage: 53.7%
+[INFO] [root:17:41:29.716] Starting [get] request for the URL https://www.openml.org/api/v1/xml/task/189354
+[INFO] [root:17:41:30.645] 0.9289818s taken for [get] request for the URL https://www.openml.org/api/v1/xml/task/189354
+[INFO] [root:17:41:30.647] Starting [get] request for the URL https://www.openml.org/api/v1/xml/data/1169
+[INFO] [root:17:41:31.241] 0.5936608s taken for [get] request for the URL https://www.openml.org/api/v1/xml/data/1169
+[INFO] [root:17:41:31.242] Starting [get] request for the URL https://www.openml.org/api/v1/xml/data/features/1169
+[INFO] [amlb.utils.process:17:41:33.591] [404610] CPU Utilization: 0.1%
+[INFO] [amlb.utils.process:17:41:33.592] [404610] Memory Usage: 6.3%
+[INFO] [amlb.utils.process:17:41:33.592] [404610] Disk Usage: 53.7%
+[INFO] [amlb.benchmark:17:41:33.594] Processing results for autosklearn.large.1h12c.local.20210126T174129

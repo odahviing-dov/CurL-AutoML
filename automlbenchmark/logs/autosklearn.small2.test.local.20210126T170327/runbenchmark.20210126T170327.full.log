@@ -1,0 +1,615 @@
+[INFO] [amlb:17:03:27.449] Running `autosklearn` on `small2` benchmarks in `local` mode.
+[INFO] [amlb.frameworks.definitions:17:03:27.521] Loading frameworks definitions from /home/administrator/nil/automlbenchmark/resources/frameworks.yaml.
+[INFO] [amlb.resources:17:03:27.634] Loading benchmark constraint definitions from /home/administrator/nil/automlbenchmark/resources/constraints.yaml.
+[INFO] [amlb.benchmarks.file:17:03:27.640] Loading benchmark definitions from /home/administrator/nil/automlbenchmark/resources/benchmarks/small2.yaml.
+[INFO] [amlb.job:17:03:27.645] 
+--------------------------------------------------------
+Starting job local.small2.test.Australian.0.autosklearn.
+[INFO] [amlb.utils.process:17:03:27.645] [402581] CPU Utilization: 16.3%
+[INFO] [amlb.utils.process:17:03:27.646] [402581] Memory Usage: 11.3%
+[INFO] [amlb.utils.process:17:03:27.647] [402581] Disk Usage: 53.7%
+[INFO] [amlb.benchmark:17:03:27.659] Assigning 4 cores (total=12) for new task Australian.
+[INFO] [amlb.benchmark:17:03:27.659] Assigning 55029 MB (total=64324 MB) for new Australian task.
+[INFO] [amlb.benchmark:17:03:27.660] Running task Australian on framework autosklearn with config:
+TaskConfig(framework='autosklearn', framework_params={}, framework_version='stable', type='classification', name='Australian', fold=0, metrics=['auc', 'logloss', 'acc', 'balacc'], metric='auc', seed=1791625326, max_runtime_seconds=600, cores=4, max_mem_size_mb=55029, min_vol_size_mb=-1, input_dir='/home/administrator/.openml/cache', output_dir='/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327', output_predictions_file='/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/0/predictions.csv', ext={}, output_metadata_file='/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/0/metadata.json')
+[INFO] [amlb.utils.process:17:03:27.689] Running cmd `/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin/python -W ignore /home/administrator/nil/automlbenchmark/frameworks/autosklearn/exec.py`
+[INFO] [amlb.print:17:03:29.538] INFO:__main__:
+[INFO] [amlb.print:17:03:29.539] **** Auto-sklearn [v0.12.1]****
+[INFO] [amlb.print:17:03:29.539] 
+[INFO] [amlb.print:17:03:29.539] INFO:__main__:Running Auto-sklearn for Australian with a maximum time of 600s on 4 cores with 55029MB, optimizing roc_auc.
+[INFO] [amlb.print:17:03:29.571] { 'predictors_type': [ 'Categorical',
+[INFO] [amlb.print:17:03:37.617]                        'Numerical',
+[INFO] [amlb.print:17:03:37.617]                        'Numerical',
+[INFO] [amlb.print:17:03:37.617]                        'Categorical',
+[INFO] [amlb.print:17:03:37.617]                        'Categorical',
+[INFO] [amlb.print:17:03:37.617]                        'Categorical',
+[INFO] [amlb.print:17:03:37.618]                        'Numerical',
+[INFO] [amlb.print:17:03:37.618]                        'Categorical',
+[INFO] [amlb.print:17:03:37.618]                        'Categorical',
+[INFO] [amlb.print:17:03:37.618]                        'Numerical',
+[INFO] [amlb.print:17:03:37.618]                        'Categorical',
+[INFO] [amlb.print:17:03:37.618]                        'Categorical',
+[INFO] [amlb.print:17:03:37.618]                        'Numerical',
+[INFO] [amlb.print:17:03:37.619]                        'Numerical'],
+[INFO] [amlb.print:17:03:37.619]   'test': { 'X_enc': '/tmp/tmpluwyk1hd/test.X_enc.npy',
+[INFO] [amlb.print:17:03:37.619]             'y_enc': '/tmp/tmpluwyk1hd/test.y_enc.npy'},
+[INFO] [amlb.print:17:03:37.619]   'train': { 'X_enc': '/tmp/tmpluwyk1hd/train.X_enc.npy',
+[INFO] [amlb.print:17:03:37.619]              'y_enc': '/tmp/tmpluwyk1hd/train.y_enc.npy'}}
+[INFO] [amlb.print:17:03:37.619] [WARNING] [2021-01-26 17:03:37,596:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance abalone
+[INFO] [amlb.print:17:03:37.675] [WARNING] [2021-01-26 17:03:37,596:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance amazon-commerce-reviews
+[INFO] [amlb.print:17:03:37.675] [WARNING] [2021-01-26 17:03:37,597:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance analcatdata_authorship
+[INFO] [amlb.print:17:03:37.676] [WARNING] [2021-01-26 17:03:37,597:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance analcatdata_dmft
+[INFO] [amlb.print:17:03:37.676] [WARNING] [2021-01-26 17:03:37,597:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance anneal
+[INFO] [amlb.print:17:03:37.676] [WARNING] [2021-01-26 17:03:37,598:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance artificial-characters
+[INFO] [amlb.print:17:03:37.676] [WARNING] [2021-01-26 17:03:37,598:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance autouniv-au6-750
+[INFO] [amlb.print:17:03:37.676] [WARNING] [2021-01-26 17:03:37,599:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance autouniv-au7-1100
+[INFO] [amlb.print:17:03:37.676] [WARNING] [2021-01-26 17:03:37,599:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance autouniv-au7-700
+[INFO] [amlb.print:17:03:37.676] [WARNING] [2021-01-26 17:03:37,599:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance bachchoralharmony
+[INFO] [amlb.print:17:03:37.677] [WARNING] [2021-01-26 17:03:37,599:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance balance-scale
+[INFO] [amlb.print:17:03:37.677] [WARNING] [2021-01-26 17:03:37,600:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance baseball
+[INFO] [amlb.print:17:03:37.677] [WARNING] [2021-01-26 17:03:37,601:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance cardiotocography
+[INFO] [amlb.print:17:03:37.677] [WARNING] [2021-01-26 17:03:37,601:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance cifar_10
+[INFO] [amlb.print:17:03:37.677] [WARNING] [2021-01-26 17:03:37,601:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance cjs
+[INFO] [amlb.print:17:03:37.677] [WARNING] [2021-01-26 17:03:37,602:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance cmc
+[INFO] [amlb.print:17:03:37.677] [WARNING] [2021-01-26 17:03:37,602:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance collins
+[INFO] [amlb.print:17:03:37.678] [WARNING] [2021-01-26 17:03:37,603:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance devnagari-script
+[INFO] [amlb.print:17:03:37.678] [WARNING] [2021-01-26 17:03:37,604:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance diabetes130us
+[INFO] [amlb.print:17:03:37.678] [WARNING] [2021-01-26 17:03:37,604:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance dna
+[INFO] [amlb.print:17:03:37.678] [WARNING] [2021-01-26 17:03:37,605:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance eating
+[INFO] [amlb.print:17:03:37.678] [WARNING] [2021-01-26 17:03:37,674:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance eucalyptus
+[INFO] [amlb.print:17:03:37.679] [WARNING] [2021-01-26 17:03:37,675:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance eye_movements
+[INFO] [amlb.print:17:03:37.679] [WARNING] [2021-01-26 17:03:37,675:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance fars
+[INFO] [amlb.print:17:03:37.679] [WARNING] [2021-01-26 17:03:37,676:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance first-order-theorem-proving
+[INFO] [amlb.print:17:03:37.679] [WARNING] [2021-01-26 17:03:37,678:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance gesturephasesegmentationprocessed
+[INFO] [amlb.print:17:03:37.680] [WARNING] [2021-01-26 17:03:37,679:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance gtsrb-hog01
+[INFO] [amlb.print:17:03:37.680] [WARNING] [2021-01-26 17:03:37,679:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance gtsrb-hog02
+[INFO] [amlb.print:17:03:37.703] [WARNING] [2021-01-26 17:03:37,679:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance gtsrb-hog03
+[INFO] [amlb.print:17:03:37.704] [WARNING] [2021-01-26 17:03:37,680:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance gtsrb-huehist
+[INFO] [amlb.print:17:03:37.704] [WARNING] [2021-01-26 17:03:37,680:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance har
+[INFO] [amlb.print:17:03:37.704] [WARNING] [2021-01-26 17:03:37,681:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance hypothyroid
+[INFO] [amlb.print:17:03:37.704] [WARNING] [2021-01-26 17:03:37,681:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance indian_pines
+[INFO] [amlb.print:17:03:37.705] [WARNING] [2021-01-26 17:03:37,682:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance isolet
+[INFO] [amlb.print:17:03:37.705] [WARNING] [2021-01-26 17:03:37,682:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance japanesevowels
+[INFO] [amlb.print:17:03:37.705] [WARNING] [2021-01-26 17:03:37,683:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance kr-vs-k
+[INFO] [amlb.print:17:03:37.705] [WARNING] [2021-01-26 17:03:37,684:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance kropt
+[INFO] [amlb.print:17:03:37.705] [WARNING] [2021-01-26 17:03:37,684:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance kuzushiji-49
+[INFO] [amlb.print:17:03:37.706] [WARNING] [2021-01-26 17:03:37,684:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance kuzushiji-mnist
+[INFO] [amlb.print:17:03:37.706] [WARNING] [2021-01-26 17:03:37,685:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance ldpa
+[INFO] [amlb.print:17:03:37.706] [WARNING] [2021-01-26 17:03:37,685:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance led-display-domain-7digit
+[INFO] [amlb.print:17:03:37.706] [WARNING] [2021-01-26 17:03:37,686:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance led24
+[INFO] [amlb.print:17:03:37.706] [WARNING] [2021-01-26 17:03:37,686:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance letter
+[INFO] [amlb.print:17:03:37.707] [WARNING] [2021-01-26 17:03:37,687:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance meta_stream_intervals.arff
+[INFO] [amlb.print:17:03:37.707] [WARNING] [2021-01-26 17:03:37,687:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance miceprotein
+[INFO] [amlb.print:17:03:37.707] [WARNING] [2021-01-26 17:03:37,687:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance micro-mass
+[INFO] [amlb.print:17:03:37.707] [WARNING] [2021-01-26 17:03:37,688:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance microaggregation2
+[INFO] [amlb.print:17:03:37.707] [WARNING] [2021-01-26 17:03:37,688:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance mnist_784
+[INFO] [amlb.print:17:03:37.708] [WARNING] [2021-01-26 17:03:37,689:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance nursery
+[INFO] [amlb.print:17:03:37.708] [WARNING] [2021-01-26 17:03:37,690:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance one-hundred-plants-margin
+[INFO] [amlb.print:17:03:37.708] [WARNING] [2021-01-26 17:03:37,690:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance optdigits
+[INFO] [amlb.print:17:03:37.708] [WARNING] [2021-01-26 17:03:37,691:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance page-blocks
+[INFO] [amlb.print:17:03:37.708] [WARNING] [2021-01-26 17:03:37,692:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance pendigits
+[INFO] [amlb.print:17:03:37.709] [WARNING] [2021-01-26 17:03:37,693:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance pokerhand
+[INFO] [amlb.print:17:03:37.709] [WARNING] [2021-01-26 17:03:37,695:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance satimage
+[INFO] [amlb.print:17:03:37.709] [WARNING] [2021-01-26 17:03:37,695:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance semeion
+[INFO] [amlb.print:17:03:37.893] [WARNING] [2021-01-26 17:03:37,696:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance soybean
+[INFO] [amlb.print:17:03:37.906] [WARNING] [2021-01-26 17:03:37,697:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance splice
+[INFO] [amlb.print:17:03:37.906] [WARNING] [2021-01-26 17:03:37,697:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance spoken-arabic-digit
+[INFO] [amlb.print:17:03:37.906] [WARNING] [2021-01-26 17:03:37,698:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance svhn
+[INFO] [amlb.print:17:03:37.906] [WARNING] [2021-01-26 17:03:37,698:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance synthetic_control
+[INFO] [amlb.print:17:03:37.906] [WARNING] [2021-01-26 17:03:37,698:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance tamilnadu-electricity
+[INFO] [amlb.print:17:03:37.907] [WARNING] [2021-01-26 17:03:37,699:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance texture
+[INFO] [amlb.print:17:03:37.907] [WARNING] [2021-01-26 17:03:37,699:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance traffic_violations
+[INFO] [amlb.print:17:03:37.907] [WARNING] [2021-01-26 17:03:37,700:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance umist_faces_cropped
+[INFO] [amlb.print:17:03:37.907] [WARNING] [2021-01-26 17:03:37,700:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance usps
+[INFO] [amlb.print:17:03:37.907] [WARNING] [2021-01-26 17:03:37,700:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-a2
+[INFO] [amlb.print:17:03:37.907] [WARNING] [2021-01-26 17:03:37,701:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-a3
+[INFO] [amlb.print:17:03:37.907] [WARNING] [2021-01-26 17:03:37,701:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-a4
+[INFO] [amlb.print:17:03:37.908] [WARNING] [2021-01-26 17:03:37,701:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-b1
+[INFO] [amlb.print:17:03:37.908] [WARNING] [2021-01-26 17:03:37,702:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-b2
+[INFO] [amlb.print:17:03:37.908] [WARNING] [2021-01-26 17:03:37,702:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-b5
+[INFO] [amlb.print:17:03:37.908] [WARNING] [2021-01-26 17:03:37,702:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-b6
+[INFO] [amlb.print:17:03:37.908] [WARNING] [2021-01-26 17:03:37,702:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-d1
+[INFO] [amlb.print:17:03:37.908] [WARNING] [2021-01-26 17:03:37,703:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-d4
+[INFO] [amlb.print:17:03:37.908] [WARNING] [2021-01-26 17:03:37,703:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance volcanoes-e1
+[INFO] [amlb.print:17:03:37.909] [WARNING] [2021-01-26 17:03:37,704:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance vowel
+[INFO] [amlb.print:17:03:37.909] [WARNING] [2021-01-26 17:03:37,704:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance walking-activity
+[INFO] [amlb.print:17:03:37.909] [WARNING] [2021-01-26 17:03:37,704:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance wall-robot-navigation
+[INFO] [amlb.print:17:03:37.909] [WARNING] [2021-01-26 17:03:37,704:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance waveform-5000
+[INFO] [amlb.print:17:03:37.909] [WARNING] [2021-01-26 17:03:37,705:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance wine-quality-red
+[INFO] [amlb.print:17:03:37.909] [WARNING] [2021-01-26 17:03:37,705:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance wine-quality-white
+[INFO] [amlb.print:17:03:37.909] [WARNING] [2021-01-26 17:03:37,706:Client-AutoMLSMBO(1791625326)::Australian] Could not find runs for instance yeast
+[INFO] [amlb.print:17:03:37.910] [WARNING] [2021-01-26 17:03:37,893:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance autouniv-au7-700
+[INFO] [amlb.print:17:03:37.910] [WARNING] [2021-01-26 17:03:37,893:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance cmc
+[INFO] [amlb.print:17:03:37.910] [WARNING] [2021-01-26 17:03:37,893:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance waveform-5000
+[INFO] [amlb.print:17:03:37.910] [WARNING] [2021-01-26 17:03:37,893:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance eye_movements
+[INFO] [amlb.print:17:03:37.910] [WARNING] [2021-01-26 17:03:37,894:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance splice
+[INFO] [amlb.print:17:03:37.910] [WARNING] [2021-01-26 17:03:37,894:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance autouniv-au7-1100
+[INFO] [amlb.print:17:03:37.910] [WARNING] [2021-01-26 17:03:37,894:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance dna
+[INFO] [amlb.print:17:03:37.911] [WARNING] [2021-01-26 17:03:37,894:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance balance-scale
+[INFO] [amlb.print:17:03:37.911] [WARNING] [2021-01-26 17:03:37,894:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance analcatdata_authorship
+[INFO] [amlb.print:17:03:37.911] [WARNING] [2021-01-26 17:03:37,894:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance wall-robot-navigation
+[INFO] [amlb.print:17:03:37.911] [WARNING] [2021-01-26 17:03:37,894:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance wine-quality-red
+[INFO] [amlb.print:17:03:37.911] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance analcatdata_dmft
+[INFO] [amlb.print:17:03:37.911] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance cardiotocography
+[INFO] [amlb.print:17:03:37.911] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance eucalyptus
+[INFO] [amlb.print:17:03:37.912] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance first-order-theorem-proving
+[INFO] [amlb.print:17:03:37.912] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance gesturephasesegmentationprocessed
+[INFO] [amlb.print:17:03:37.912] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance yeast
+[INFO] [amlb.print:17:03:37.912] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance satimage
+[INFO] [amlb.print:17:03:37.912] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance baseball
+[INFO] [amlb.print:17:03:37.912] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance synthetic_control
+[INFO] [amlb.print:17:03:37.912] [WARNING] [2021-01-26 17:03:37,895:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance wine-quality-white
+[INFO] [amlb.print:17:03:37.913] [WARNING] [2021-01-26 17:03:37,896:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance microaggregation2
+[INFO] [amlb.print:17:03:37.913] [WARNING] [2021-01-26 17:03:37,896:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance autouniv-au6-750
+[INFO] [amlb.print:17:03:37.913] [WARNING] [2021-01-26 17:03:37,896:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance vowel
+[INFO] [amlb.print:17:03:37.913] [WARNING] [2021-01-26 17:03:37,897:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance led-display-domain-7digit
+[INFO] [amlb.print:17:03:37.913] [WARNING] [2021-01-26 17:03:37,897:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance led24
+[INFO] [amlb.print:17:03:37.913] [WARNING] [2021-01-26 17:03:37,898:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance indian_pines
+[INFO] [amlb.print:17:03:37.913] [WARNING] [2021-01-26 17:03:37,898:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance har
+[INFO] [amlb.print:17:03:37.914] [WARNING] [2021-01-26 17:03:37,898:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance nursery
+[INFO] [amlb.print:17:03:37.914] [WARNING] [2021-01-26 17:03:37,898:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-a3
+[INFO] [amlb.print:17:03:37.914] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-e1
+[INFO] [amlb.print:17:03:37.914] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-a4
+[INFO] [amlb.print:17:03:37.914] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance texture
+[INFO] [amlb.print:17:03:37.914] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance japanesevowels
+[INFO] [amlb.print:17:03:37.914] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-a2
+[INFO] [amlb.print:17:03:37.914] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance optdigits
+[INFO] [amlb.print:17:03:37.915] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance usps
+[INFO] [amlb.print:17:03:37.915] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance pendigits
+[INFO] [amlb.print:17:03:37.915] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance meta_stream_intervals.arff
+[INFO] [amlb.print:17:03:37.915] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance collins
+[INFO] [amlb.print:17:03:37.915] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance semeion
+[INFO] [amlb.print:17:03:37.915] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance artificial-characters
+[INFO] [amlb.utils.process:17:05:27.650] [402581] CPU Utilization: 27.4%
+[INFO] [amlb.utils.process:17:05:27.651] [402581] Memory Usage: 12.7%
+[INFO] [amlb.utils.process:17:05:27.652] [402581] Disk Usage: 53.8%
+[INFO] [amlb.utils.process:17:07:27.656] [402581] CPU Utilization: 27.4%
+[INFO] [amlb.utils.process:17:07:27.658] [402581] Memory Usage: 13.1%
+[INFO] [amlb.utils.process:17:07:27.658] [402581] Disk Usage: 53.8%
+[INFO] [amlb.utils.process:17:09:27.663] [402581] CPU Utilization: 26.3%
+[INFO] [amlb.utils.process:17:09:27.665] [402581] Memory Usage: 12.6%
+[INFO] [amlb.utils.process:17:09:27.665] [402581] Disk Usage: 53.8%
+[INFO] [amlb.utils.process:17:11:27.668] [402581] CPU Utilization: 24.5%
+[INFO] [amlb.utils.process:17:11:27.670] [402581] Memory Usage: 12.7%
+[INFO] [amlb.utils.process:17:11:27.670] [402581] Disk Usage: 53.8%
+[INFO] [amlb.utils.process:17:13:27.673] [402581] CPU Utilization: 22.4%
+[INFO] [amlb.utils.process:17:13:27.674] [402581] Memory Usage: 12.4%
+[INFO] [amlb.utils.process:17:13:27.674] [402581] Disk Usage: 53.8%
+[INFO] [amlb.print:17:13:38.940] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance fars
+[INFO] [amlb.print:17:13:38.941] INFO:__main__:Environment: environ({'AMLB_PATH': '/home/administrator/nil/automlbenchmark/amlb', 'PATH': '/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin:/home/administrator/.local/bin:/home/administrator/anaconda3/bin:/home/administrator/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PWD': '/home/administrator/nil/automlbenchmark', 'PYTHONPATH': '/home/administrator/nil/automlbenchmark', 'LC_CTYPE': 'C.UTF-8', 'JOBLIB_TEMP_FOLDER': '/tmp', 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1', 'KMP_INIT_AT_FORK': 'FALSE', 'KMP_DUPLICATE_LIB_OK': 'True'})
+[INFO] [amlb.print:17:13:38.941] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance abalone
+[INFO] [amlb.print:17:13:38.942] INFO:__main__:Using 13757.25MB memory per job and on a total of 4 jobs.
+[INFO] [amlb.print:17:13:38.942] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance page-blocks
+[INFO] [amlb.print:17:13:38.942] WARNING:__main__:Using meta-learned initialization, which might be bad (leakage).
+[INFO] [amlb.print:17:13:38.942] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-d4
+[INFO] [amlb.print:17:13:38.943] INFO:__main__:Auto-sklearn constructor arguments: {'metric': roc_auc, 'time_left_for_this_task': 600, 'n_jobs': 4, 'seed': 1791625326}
+[INFO] [amlb.print:17:13:38.943] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance kuzushiji-mnist
+[INFO] [amlb.print:17:13:38.943] INFO:__main__:Auto-sklearn additional constructor arguments: {}
+[INFO] [amlb.print:17:13:38.943] [WARNING] [2021-01-26 17:03:37,899:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-d1
+[INFO] [amlb.print:17:13:38.943] INFO:__main__:Auto-sklearn fit() arguments: {'dataset_name': 'Australian'}
+[INFO] [amlb.print:17:13:38.943] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-b5
+[INFO] [amlb.print:17:13:38.944] 
+[INFO] [amlb.print:17:13:38.944] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-b6
+[INFO] [amlb.print:17:13:38.944] 
+[INFO] [amlb.print:17:13:38.944] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-b1
+[INFO] [amlb.print:17:13:38.944] 
+[INFO] [amlb.print:17:13:38.944] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance volcanoes-b2
+[INFO] [amlb.print:17:13:38.944] 
+[INFO] [amlb.print:17:13:38.944] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance kr-vs-k
+[INFO] [amlb.print:17:13:38.945] 
+[INFO] [amlb.print:17:13:38.945] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance kropt
+[INFO] [amlb.print:17:13:38.945] 
+[INFO] [amlb.print:17:13:38.945] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance letter
+[INFO] [amlb.print:17:13:38.945] 
+[INFO] [amlb.print:17:13:38.945] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance isolet
+[INFO] [amlb.print:17:13:38.945] 
+[INFO] [amlb.print:17:13:38.946] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance hypothyroid
+[INFO] [amlb.print:17:13:38.946] 
+[INFO] [amlb.print:17:13:38.946] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance bachchoralharmony
+[INFO] [amlb.print:17:13:38.946] 
+[INFO] [amlb.print:17:13:38.946] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance svhn
+[INFO] [amlb.print:17:13:38.946] 
+[INFO] [amlb.print:17:13:38.946] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance ldpa
+[INFO] [amlb.print:17:13:38.947] 
+[INFO] [amlb.print:17:13:38.947] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance cifar_10
+[INFO] [amlb.print:17:13:38.947] 
+[INFO] [amlb.print:17:13:38.947] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance gtsrb-huehist
+[INFO] [amlb.print:17:13:38.947] 
+[INFO] [amlb.print:17:13:38.947] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance spoken-arabic-digit
+[INFO] [amlb.print:17:13:38.947] 
+[INFO] [amlb.print:17:13:38.948] [WARNING] [2021-01-26 17:03:37,900:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance micro-mass
+[INFO] [amlb.print:17:13:38.948] 
+[INFO] [amlb.print:17:13:38.948] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance one-hundred-plants-margin
+[INFO] [amlb.print:17:13:38.948] 
+[INFO] [amlb.print:17:13:38.948] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance miceprotein
+[INFO] [amlb.print:17:13:38.948] 
+[INFO] [amlb.print:17:13:38.948] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance tamilnadu-electricity
+[INFO] [amlb.print:17:13:38.949] 
+[INFO] [amlb.print:17:13:38.949] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance soybean
+[INFO] [amlb.print:17:13:38.949] 
+[INFO] [amlb.print:17:13:38.949] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance gtsrb-hog01
+[INFO] [amlb.print:17:13:38.949] 
+[INFO] [amlb.print:17:13:38.949] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance gtsrb-hog02
+[INFO] [amlb.print:17:13:38.949] 
+[INFO] [amlb.print:17:13:38.950] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance devnagari-script
+[INFO] [amlb.print:17:13:38.950] 
+[INFO] [amlb.print:17:13:38.950] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance eating
+[INFO] [amlb.print:17:13:38.950] 
+[INFO] [amlb.print:17:13:38.950] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance walking-activity
+[INFO] [amlb.print:17:13:38.950] 
+[INFO] [amlb.print:17:13:38.951] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance traffic_violations
+[INFO] [amlb.print:17:13:38.951] 
+[INFO] [amlb.print:17:13:38.951] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance gtsrb-hog03
+[INFO] [amlb.print:17:13:38.951] 
+[INFO] [amlb.print:17:13:38.951] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance kuzushiji-49
+[INFO] [amlb.print:17:13:38.952] 
+[INFO] [amlb.print:17:13:38.952] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance anneal
+[INFO] [amlb.print:17:13:38.952] 
+[INFO] [amlb.print:17:13:38.952] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance cjs
+[INFO] [amlb.print:17:13:38.952] 
+[INFO] [amlb.print:17:13:38.952] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance pokerhand
+[INFO] [amlb.print:17:13:38.952] 
+[INFO] [amlb.print:17:13:38.953] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance mnist_784
+[INFO] [amlb.print:17:13:38.953] 
+[INFO] [amlb.print:17:13:38.953] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance amazon-commerce-reviews
+[INFO] [amlb.print:17:13:38.953] 
+[INFO] [amlb.print:17:13:38.953] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance umist_faces_cropped
+[INFO] [amlb.print:17:13:38.953] 
+[INFO] [amlb.print:17:13:38.953] [WARNING] [2021-01-26 17:03:37,901:Client-AutoMLSMBO(1791625326)::Australian] Found no best configuration for instance diabetes130us
+[INFO] [amlb.print:17:13:38.953] 
+[INFO] [amlb.print:17:13:38.954] 
+[INFO] [amlb.print:17:13:38.954] 
+[INFO] [amlb.print:17:13:38.954] 
+[INFO] [amlb.results:17:13:38.986] Predictions preview:
+            0         1 predictions truth
+0   0.038621  0.961379           1     1
+1   0.037642  0.962358           1     1
+2   0.034595  0.965405           1     1
+3   0.035109  0.964891           1     1
+4   0.054385  0.945615           1     1
+5   0.078441  0.921559           1     1
+6   0.035726  0.964274           1     1
+7   0.045300  0.954700           1     1
+8   0.041669  0.958331           1     1
+9   0.037339  0.962661           1     1
+10  0.083896  0.916104           1     1
+11  0.039781  0.960219           1     1
+12  0.068511  0.931489           1     1
+13  0.890574  0.109426           0     1
+14  0.037875  0.962125           1     1
+15  0.035614  0.964386           1     1
+16  0.033222  0.966778           1     1
+17  0.035631  0.964369           1     1
+18  0.045900  0.954100           1     1
+19  0.961720  0.038280           0     1
+
+[INFO] [amlb.results:17:13:38.992] Predictions saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/0/predictions.csv`.
+[INFO] [amlb.results:17:13:38.993] Loading metadata from `/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/0/metadata.json`.
+[INFO] [amlb.results:17:13:39.066] Loading predictions from `/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/0/predictions.csv`.
+[INFO] [amlb.results:17:13:39.083] Metric scores: { 'acc': 0.8985507246376812,
+  'app_version': 'dev [master, 54881a2]',
+  'auc': 0.9499151103565365,
+  'balacc': 0.8960101867572157,
+  'constraint': 'test',
+  'duration': nan,
+  'fold': 0,
+  'framework': 'autosklearn',
+  'id': 'openml.org/t/146818',
+  'info': None,
+  'logloss': 0.30611903097355986,
+  'metric': 'auc',
+  'mode': 'local',
+  'models_count': 9,
+  'params': '',
+  'predict_duration': 0.24397730827331543,
+  'result': 0.9499151103565365,
+  'seed': 1791625326,
+  'task': 'Australian',
+  'training_duration': 608.1885762214661,
+  'utc': '2021-01-26T17:13:39',
+  'version': '0.12.1'}
+[INFO] [amlb.job:17:13:39.085] Job local.small2.test.Australian.0.autosklearn executed in 611.440 seconds.
+[INFO] [amlb.job:17:13:39.086] 
+--------------------------------------------------------
+Starting job local.small2.test.Australian.1.autosklearn.
+[INFO] [amlb.benchmark:17:13:39.100] Assigning 4 cores (total=12) for new task Australian.
+[INFO] [amlb.benchmark:17:13:39.101] Assigning 55025 MB (total=64324 MB) for new Australian task.
+[INFO] [amlb.benchmark:17:13:39.102] Running task Australian on framework autosklearn with config:
+TaskConfig(framework='autosklearn', framework_params={}, framework_version='stable', type='classification', name='Australian', fold=1, metrics=['auc', 'logloss', 'acc', 'balacc'], metric='auc', seed=1791625327, max_runtime_seconds=600, cores=4, max_mem_size_mb=55025, min_vol_size_mb=-1, input_dir='/home/administrator/.openml/cache', output_dir='/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327', output_predictions_file='/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/1/predictions.csv', ext={}, output_metadata_file='/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/1/metadata.json')
+[INFO] [amlb.utils.process:17:13:39.128] Running cmd `/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin/python -W ignore /home/administrator/nil/automlbenchmark/frameworks/autosklearn/exec.py`
+[INFO] [amlb.print:17:13:40.885] INFO:__main__:
+[INFO] [amlb.print:17:13:40.885] **** Auto-sklearn [v0.12.1]****
+[INFO] [amlb.print:17:13:40.885] 
+[INFO] [amlb.print:17:13:40.886] INFO:__main__:Running Auto-sklearn for Australian with a maximum time of 600s on 4 cores with 55025MB, optimizing roc_auc.
+[INFO] [amlb.print:17:13:40.917] { 'predictors_type': [ 'Categorical',
+[INFO] [amlb.print:17:13:51.572]                        'Numerical',
+[INFO] [amlb.print:17:13:51.572]                        'Numerical',
+[INFO] [amlb.print:17:13:51.572]                        'Categorical',
+[INFO] [amlb.print:17:13:51.572]                        'Categorical',
+[INFO] [amlb.print:17:13:51.573]                        'Categorical',
+[INFO] [amlb.print:17:13:51.573]                        'Numerical',
+[INFO] [amlb.print:17:13:51.573]                        'Categorical',
+[INFO] [amlb.print:17:13:51.573]                        'Categorical',
+[INFO] [amlb.print:17:13:51.573]                        'Numerical',
+[INFO] [amlb.print:17:13:51.573]                        'Categorical',
+[INFO] [amlb.print:17:13:51.574]                        'Categorical',
+[INFO] [amlb.print:17:13:51.574]                        'Numerical',
+[INFO] [amlb.print:17:13:51.574]                        'Numerical'],
+[INFO] [amlb.print:17:13:51.574]   'test': { 'X_enc': '/tmp/tmp7w_r30hu/test.X_enc.npy',
+[INFO] [amlb.print:17:13:51.574]             'y_enc': '/tmp/tmp7w_r30hu/test.y_enc.npy'},
+[INFO] [amlb.print:17:13:51.574]   'train': { 'X_enc': '/tmp/tmp7w_r30hu/train.X_enc.npy',
+[INFO] [amlb.print:17:13:51.574]              'y_enc': '/tmp/tmp7w_r30hu/train.y_enc.npy'}}
+[INFO] [amlb.print:17:13:51.575] [WARNING] [2021-01-26 17:13:51,550:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance abalone
+[INFO] [amlb.print:17:13:51.575] [WARNING] [2021-01-26 17:13:51,551:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance amazon-commerce-reviews
+[INFO] [amlb.print:17:13:51.575] [WARNING] [2021-01-26 17:13:51,551:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance analcatdata_authorship
+[INFO] [amlb.print:17:13:51.575] [WARNING] [2021-01-26 17:13:51,551:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance analcatdata_dmft
+[INFO] [amlb.print:17:13:51.575] [WARNING] [2021-01-26 17:13:51,552:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance anneal
+[INFO] [amlb.print:17:13:51.575] [WARNING] [2021-01-26 17:13:51,552:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance artificial-characters
+[INFO] [amlb.print:17:13:51.576] [WARNING] [2021-01-26 17:13:51,553:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance autouniv-au6-750
+[INFO] [amlb.print:17:13:51.576] [WARNING] [2021-01-26 17:13:51,553:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance autouniv-au7-1100
+[INFO] [amlb.print:17:13:51.576] [WARNING] [2021-01-26 17:13:51,554:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance autouniv-au7-700
+[INFO] [amlb.print:17:13:51.576] [WARNING] [2021-01-26 17:13:51,554:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance bachchoralharmony
+[INFO] [amlb.print:17:13:51.576] [WARNING] [2021-01-26 17:13:51,554:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance balance-scale
+[INFO] [amlb.print:17:13:51.576] [WARNING] [2021-01-26 17:13:51,555:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance baseball
+[INFO] [amlb.print:17:13:51.577] [WARNING] [2021-01-26 17:13:51,555:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance cardiotocography
+[INFO] [amlb.print:17:13:51.577] [WARNING] [2021-01-26 17:13:51,556:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance cifar_10
+[INFO] [amlb.print:17:13:51.577] [WARNING] [2021-01-26 17:13:51,556:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance cjs
+[INFO] [amlb.print:17:13:51.577] [WARNING] [2021-01-26 17:13:51,556:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance cmc
+[INFO] [amlb.print:17:13:51.577] [WARNING] [2021-01-26 17:13:51,557:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance collins
+[INFO] [amlb.print:17:13:51.577] [WARNING] [2021-01-26 17:13:51,558:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance devnagari-script
+[INFO] [amlb.print:17:13:51.577] [WARNING] [2021-01-26 17:13:51,558:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance diabetes130us
+[INFO] [amlb.print:17:13:51.578] [WARNING] [2021-01-26 17:13:51,559:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance dna
+[INFO] [amlb.print:17:13:51.578] [WARNING] [2021-01-26 17:13:51,560:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance eating
+[INFO] [amlb.print:17:13:51.578] [WARNING] [2021-01-26 17:13:51,561:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance eucalyptus
+[INFO] [amlb.print:17:13:51.578] [WARNING] [2021-01-26 17:13:51,561:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance eye_movements
+[INFO] [amlb.print:17:13:51.578] [WARNING] [2021-01-26 17:13:51,561:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance fars
+[INFO] [amlb.print:17:13:51.578] [WARNING] [2021-01-26 17:13:51,562:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance first-order-theorem-proving
+[INFO] [amlb.print:17:13:51.578] [WARNING] [2021-01-26 17:13:51,564:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance gesturephasesegmentationprocessed
+[INFO] [amlb.print:17:13:51.579] [WARNING] [2021-01-26 17:13:51,564:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance gtsrb-hog01
+[INFO] [amlb.print:17:13:51.579] [WARNING] [2021-01-26 17:13:51,565:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance gtsrb-hog02
+[INFO] [amlb.print:17:13:51.579] [WARNING] [2021-01-26 17:13:51,565:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance gtsrb-hog03
+[INFO] [amlb.print:17:13:51.579] [WARNING] [2021-01-26 17:13:51,565:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance gtsrb-huehist
+[INFO] [amlb.print:17:13:51.579] [WARNING] [2021-01-26 17:13:51,566:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance har
+[INFO] [amlb.print:17:13:51.579] [WARNING] [2021-01-26 17:13:51,566:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance hypothyroid
+[INFO] [amlb.print:17:13:51.580] [WARNING] [2021-01-26 17:13:51,567:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance indian_pines
+[INFO] [amlb.print:17:13:51.669] [WARNING] [2021-01-26 17:13:51,567:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance isolet
+[INFO] [amlb.print:17:13:51.670] [WARNING] [2021-01-26 17:13:51,568:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance japanesevowels
+[INFO] [amlb.print:17:13:51.670] [WARNING] [2021-01-26 17:13:51,569:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance kr-vs-k
+[INFO] [amlb.print:17:13:51.670] [WARNING] [2021-01-26 17:13:51,569:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance kropt
+[INFO] [amlb.print:17:13:51.670] [WARNING] [2021-01-26 17:13:51,569:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance kuzushiji-49
+[INFO] [amlb.print:17:13:51.670] [WARNING] [2021-01-26 17:13:51,570:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance kuzushiji-mnist
+[INFO] [amlb.print:17:13:51.671] [WARNING] [2021-01-26 17:13:51,669:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance ldpa
+[INFO] [amlb.print:17:13:51.672] [WARNING] [2021-01-26 17:13:51,669:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance led-display-domain-7digit
+[INFO] [amlb.print:17:13:51.672] [WARNING] [2021-01-26 17:13:51,670:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance led24
+[INFO] [amlb.print:17:13:51.672] [WARNING] [2021-01-26 17:13:51,670:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance letter
+[INFO] [amlb.print:17:13:51.672] [WARNING] [2021-01-26 17:13:51,671:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance meta_stream_intervals.arff
+[INFO] [amlb.print:17:13:51.672] [WARNING] [2021-01-26 17:13:51,672:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance miceprotein
+[INFO] [amlb.print:17:13:51.672] [WARNING] [2021-01-26 17:13:51,672:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance micro-mass
+[INFO] [amlb.print:17:13:51.673] [WARNING] [2021-01-26 17:13:51,672:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance microaggregation2
+[INFO] [amlb.print:17:13:51.673] [WARNING] [2021-01-26 17:13:51,673:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance mnist_784
+[INFO] [amlb.print:17:13:51.674] [WARNING] [2021-01-26 17:13:51,674:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance nursery
+[INFO] [amlb.print:17:13:51.675] [WARNING] [2021-01-26 17:13:51,675:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance one-hundred-plants-margin
+[INFO] [amlb.print:17:13:51.675] [WARNING] [2021-01-26 17:13:51,675:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance optdigits
+[INFO] [amlb.print:17:13:51.676] [WARNING] [2021-01-26 17:13:51,676:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance page-blocks
+[INFO] [amlb.print:17:13:51.678] [WARNING] [2021-01-26 17:13:51,677:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance pendigits
+[INFO] [amlb.print:17:13:51.678] [WARNING] [2021-01-26 17:13:51,678:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance pokerhand
+[INFO] [amlb.print:17:13:51.720] [WARNING] [2021-01-26 17:13:51,681:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance satimage
+[INFO] [amlb.print:17:13:51.720] [WARNING] [2021-01-26 17:13:51,681:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance semeion
+[INFO] [amlb.print:17:13:51.720] [WARNING] [2021-01-26 17:13:51,682:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance soybean
+[INFO] [amlb.print:17:13:51.720] [WARNING] [2021-01-26 17:13:51,683:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance splice
+[INFO] [amlb.print:17:13:51.720] [WARNING] [2021-01-26 17:13:51,683:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance spoken-arabic-digit
+[INFO] [amlb.print:17:13:51.721] [WARNING] [2021-01-26 17:13:51,684:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance svhn
+[INFO] [amlb.print:17:13:51.721] [WARNING] [2021-01-26 17:13:51,684:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance synthetic_control
+[INFO] [amlb.print:17:13:51.721] [WARNING] [2021-01-26 17:13:51,684:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance tamilnadu-electricity
+[INFO] [amlb.print:17:13:51.721] [WARNING] [2021-01-26 17:13:51,685:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance texture
+[INFO] [amlb.print:17:13:51.721] [WARNING] [2021-01-26 17:13:51,685:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance traffic_violations
+[INFO] [amlb.print:17:13:51.721] [WARNING] [2021-01-26 17:13:51,686:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance umist_faces_cropped
+[INFO] [amlb.print:17:13:51.721] [WARNING] [2021-01-26 17:13:51,686:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance usps
+[INFO] [amlb.print:17:13:51.722] [WARNING] [2021-01-26 17:13:51,686:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-a2
+[INFO] [amlb.print:17:13:51.722] [WARNING] [2021-01-26 17:13:51,687:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-a3
+[INFO] [amlb.print:17:13:51.722] [WARNING] [2021-01-26 17:13:51,687:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-a4
+[INFO] [amlb.print:17:13:51.722] [WARNING] [2021-01-26 17:13:51,687:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-b1
+[INFO] [amlb.print:17:13:51.722] [WARNING] [2021-01-26 17:13:51,687:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-b2
+[INFO] [amlb.print:17:13:51.722] [WARNING] [2021-01-26 17:13:51,688:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-b5
+[INFO] [amlb.print:17:13:51.723] [WARNING] [2021-01-26 17:13:51,688:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-b6
+[INFO] [amlb.print:17:13:51.723] [WARNING] [2021-01-26 17:13:51,688:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-d1
+[INFO] [amlb.print:17:13:51.723] [WARNING] [2021-01-26 17:13:51,689:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-d4
+[INFO] [amlb.print:17:13:51.723] [WARNING] [2021-01-26 17:13:51,689:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance volcanoes-e1
+[INFO] [amlb.print:17:13:51.834] [WARNING] [2021-01-26 17:13:51,689:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance vowel
+[INFO] [amlb.print:17:13:51.835] [WARNING] [2021-01-26 17:13:51,689:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance walking-activity
+[INFO] [amlb.print:17:13:51.835] [WARNING] [2021-01-26 17:13:51,690:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance wall-robot-navigation
+[INFO] [amlb.print:17:13:51.835] [WARNING] [2021-01-26 17:13:51,690:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance waveform-5000
+[INFO] [amlb.print:17:13:51.835] [WARNING] [2021-01-26 17:13:51,691:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance wine-quality-red
+[INFO] [amlb.print:17:13:51.836] [WARNING] [2021-01-26 17:13:51,691:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance wine-quality-white
+[INFO] [amlb.print:17:13:51.836] [WARNING] [2021-01-26 17:13:51,691:Client-AutoMLSMBO(1791625327)::Australian] Could not find runs for instance yeast
+[INFO] [amlb.print:17:13:51.836] [WARNING] [2021-01-26 17:13:51,834:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance autouniv-au7-700
+[INFO] [amlb.print:17:13:51.836] [WARNING] [2021-01-26 17:13:51,834:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance cmc
+[INFO] [amlb.print:17:13:51.836] [WARNING] [2021-01-26 17:13:51,834:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance waveform-5000
+[INFO] [amlb.print:17:13:51.837] [WARNING] [2021-01-26 17:13:51,834:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance eye_movements
+[INFO] [amlb.print:17:13:51.837] [WARNING] [2021-01-26 17:13:51,834:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance splice
+[INFO] [amlb.print:17:13:51.837] [WARNING] [2021-01-26 17:13:51,834:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance autouniv-au7-1100
+[INFO] [amlb.print:17:13:51.837] [WARNING] [2021-01-26 17:13:51,834:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance dna
+[INFO] [amlb.print:17:13:51.838] [WARNING] [2021-01-26 17:13:51,834:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance balance-scale
+[INFO] [amlb.print:17:13:51.838] [WARNING] [2021-01-26 17:13:51,834:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance analcatdata_authorship
+[INFO] [amlb.print:17:13:51.838] [WARNING] [2021-01-26 17:13:51,835:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance wall-robot-navigation
+[INFO] [amlb.print:17:13:51.838] [WARNING] [2021-01-26 17:13:51,835:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance wine-quality-red
+[INFO] [amlb.print:17:13:51.839] [WARNING] [2021-01-26 17:13:51,835:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance analcatdata_dmft
+[INFO] [amlb.print:17:13:51.839] [WARNING] [2021-01-26 17:13:51,835:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance cardiotocography
+[INFO] [amlb.print:17:13:51.839] [WARNING] [2021-01-26 17:13:51,835:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance gesturephasesegmentationprocessed
+[INFO] [amlb.print:17:13:51.839] [WARNING] [2021-01-26 17:13:51,835:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance eucalyptus
+[INFO] [amlb.print:17:13:51.840] [WARNING] [2021-01-26 17:13:51,835:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance yeast
+[INFO] [amlb.print:17:13:51.840] [WARNING] [2021-01-26 17:13:51,836:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance satimage
+[INFO] [amlb.print:17:13:51.840] [WARNING] [2021-01-26 17:13:51,836:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance baseball
+[INFO] [amlb.print:17:13:51.840] [WARNING] [2021-01-26 17:13:51,836:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance first-order-theorem-proving
+[INFO] [amlb.print:17:13:51.842] [WARNING] [2021-01-26 17:13:51,836:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance synthetic_control
+[INFO] [amlb.print:17:13:51.842] [WARNING] [2021-01-26 17:13:51,836:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance wine-quality-white
+[INFO] [amlb.print:17:13:51.842] [WARNING] [2021-01-26 17:13:51,836:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance microaggregation2
+[INFO] [amlb.print:17:13:51.842] [WARNING] [2021-01-26 17:13:51,836:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance autouniv-au6-750
+[INFO] [amlb.print:17:13:51.842] [WARNING] [2021-01-26 17:13:51,836:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance vowel
+[INFO] [amlb.print:17:13:51.842] [WARNING] [2021-01-26 17:13:51,836:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance led-display-domain-7digit
+[INFO] [amlb.print:17:13:51.843] [WARNING] [2021-01-26 17:13:51,837:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance led24
+[INFO] [amlb.print:17:13:51.843] [WARNING] [2021-01-26 17:13:51,837:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance indian_pines
+[INFO] [amlb.print:17:13:51.843] [WARNING] [2021-01-26 17:13:51,837:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance har
+[INFO] [amlb.print:17:13:51.843] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance nursery
+[INFO] [amlb.print:17:13:51.844] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-a3
+[INFO] [amlb.print:17:13:51.844] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-e1
+[INFO] [amlb.print:17:13:51.844] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-a4
+[INFO] [amlb.print:17:13:51.844] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance texture
+[INFO] [amlb.print:17:13:51.844] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance japanesevowels
+[INFO] [amlb.print:17:13:51.845] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-a2
+[INFO] [amlb.print:17:13:51.845] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance usps
+[INFO] [amlb.print:17:13:51.845] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance pendigits
+[INFO] [amlb.print:17:13:51.845] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance optdigits
+[INFO] [amlb.print:17:13:51.846] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance collins
+[INFO] [amlb.print:17:13:51.846] [WARNING] [2021-01-26 17:13:51,838:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance semeion
+[INFO] [amlb.print:17:13:51.846] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance meta_stream_intervals.arff
+[INFO] [amlb.print:17:13:51.846] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance artificial-characters
+[INFO] [amlb.print:17:13:51.846] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance abalone
+[INFO] [amlb.print:17:13:51.847] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance fars
+[INFO] [amlb.print:17:13:51.847] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance page-blocks
+[INFO] [amlb.print:17:13:51.847] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-d4
+[INFO] [amlb.print:17:13:51.847] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-d1
+[INFO] [amlb.print:17:13:51.847] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance kuzushiji-mnist
+[INFO] [amlb.print:17:13:51.848] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-b5
+[INFO] [amlb.print:17:13:51.848] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-b6
+[INFO] [amlb.print:17:13:51.848] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-b1
+[INFO] [amlb.print:17:13:51.848] [WARNING] [2021-01-26 17:13:51,839:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance volcanoes-b2
+[INFO] [amlb.print:17:13:51.849] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance kr-vs-k
+[INFO] [amlb.print:17:13:51.849] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance kropt
+[INFO] [amlb.utils.process:17:15:27.679] [402581] CPU Utilization: 23.3%
+[INFO] [amlb.utils.process:17:15:27.681] [402581] Memory Usage: 12.2%
+[INFO] [amlb.utils.process:17:15:27.681] [402581] Disk Usage: 53.8%
+[INFO] [amlb.utils.process:17:17:27.685] [402581] CPU Utilization: 21.2%
+[INFO] [amlb.utils.process:17:17:27.687] [402581] Memory Usage: 12.4%
+[INFO] [amlb.utils.process:17:17:27.687] [402581] Disk Usage: 53.8%
+[INFO] [amlb.utils.process:17:19:27.713] [402581] CPU Utilization: 22.4%
+[INFO] [amlb.utils.process:17:19:27.714] [402581] Memory Usage: 12.6%
+[INFO] [amlb.utils.process:17:19:27.714] [402581] Disk Usage: 53.8%
+[INFO] [amlb.utils.process:17:21:27.719] [402581] CPU Utilization: 27.9%
+[INFO] [amlb.utils.process:17:21:27.721] [402581] Memory Usage: 12.5%
+[INFO] [amlb.utils.process:17:21:27.722] [402581] Disk Usage: 53.8%
+[INFO] [amlb.utils.process:17:23:27.724] [402581] CPU Utilization: 17.3%
+[INFO] [amlb.utils.process:17:23:27.725] [402581] Memory Usage: 12.3%
+[INFO] [amlb.utils.process:17:23:27.726] [402581] Disk Usage: 53.8%
+[INFO] [amlb.print:17:23:52.539] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance letter
+[INFO] [amlb.print:17:23:52.540] INFO:__main__:Environment: environ({'AMLB_PATH': '/home/administrator/nil/automlbenchmark/amlb', 'PATH': '/home/administrator/nil/automlbenchmark/frameworks/autosklearn/venv/bin:/home/administrator/.local/bin:/home/administrator/anaconda3/bin:/home/administrator/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PWD': '/home/administrator/nil/automlbenchmark', 'PYTHONPATH': '/home/administrator/nil/automlbenchmark', 'LC_CTYPE': 'C.UTF-8', 'JOBLIB_TEMP_FOLDER': '/tmp', 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1', 'KMP_INIT_AT_FORK': 'FALSE', 'KMP_DUPLICATE_LIB_OK': 'True'})
+[INFO] [amlb.print:17:23:52.540] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance isolet
+[INFO] [amlb.print:17:23:52.540] INFO:__main__:Using 13756.25MB memory per job and on a total of 4 jobs.
+[INFO] [amlb.print:17:23:52.540] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance hypothyroid
+[INFO] [amlb.print:17:23:52.541] WARNING:__main__:Using meta-learned initialization, which might be bad (leakage).
+[INFO] [amlb.print:17:23:52.541] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance bachchoralharmony
+[INFO] [amlb.print:17:23:52.541] INFO:__main__:Auto-sklearn constructor arguments: {'metric': roc_auc, 'time_left_for_this_task': 600, 'n_jobs': 4, 'seed': 1791625327}
+[INFO] [amlb.print:17:23:52.541] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance svhn
+[INFO] [amlb.print:17:23:52.541] INFO:__main__:Auto-sklearn additional constructor arguments: {}
+[INFO] [amlb.print:17:23:52.541] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance ldpa
+[INFO] [amlb.print:17:23:52.541] INFO:__main__:Auto-sklearn fit() arguments: {'dataset_name': 'Australian'}
+[INFO] [amlb.print:17:23:52.542] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance cifar_10
+[INFO] [amlb.print:17:23:52.542] 
+[INFO] [amlb.print:17:23:52.542] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance gtsrb-huehist
+[INFO] [amlb.print:17:23:52.542] 
+[INFO] [amlb.print:17:23:52.543] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance spoken-arabic-digit
+[INFO] [amlb.print:17:23:52.543] 
+[INFO] [amlb.print:17:23:52.543] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance micro-mass
+[INFO] [amlb.print:17:23:52.543] 
+[INFO] [amlb.print:17:23:52.543] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance one-hundred-plants-margin
+[INFO] [amlb.print:17:23:52.543] 
+[INFO] [amlb.print:17:23:52.543] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance miceprotein
+[INFO] [amlb.print:17:23:52.544] 
+[INFO] [amlb.print:17:23:52.544] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance tamilnadu-electricity
+[INFO] [amlb.print:17:23:52.544] 
+[INFO] [amlb.print:17:23:52.544] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance gtsrb-hog01
+[INFO] [amlb.print:17:23:52.544] 
+[INFO] [amlb.print:17:23:52.544] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance gtsrb-hog02
+[INFO] [amlb.print:17:23:52.545] 
+[INFO] [amlb.print:17:23:52.545] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance soybean
+[INFO] [amlb.print:17:23:52.545] 
+[INFO] [amlb.print:17:23:52.545] [WARNING] [2021-01-26 17:13:51,840:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance devnagari-script
+[INFO] [amlb.print:17:23:52.545] 
+[INFO] [amlb.print:17:23:52.545] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance walking-activity
+[INFO] [amlb.print:17:23:52.545] 
+[INFO] [amlb.print:17:23:52.546] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance eating
+[INFO] [amlb.print:17:23:52.546] 
+[INFO] [amlb.print:17:23:52.546] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance gtsrb-hog03
+[INFO] [amlb.print:17:23:52.546] 
+[INFO] [amlb.print:17:23:52.546] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance traffic_violations
+[INFO] [amlb.print:17:23:52.546] 
+[INFO] [amlb.print:17:23:52.546] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance kuzushiji-49
+[INFO] [amlb.print:17:23:52.547] 
+[INFO] [amlb.print:17:23:52.547] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance anneal
+[INFO] [amlb.print:17:23:52.547] 
+[INFO] [amlb.print:17:23:52.547] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance cjs
+[INFO] [amlb.print:17:23:52.547] 
+[INFO] [amlb.print:17:23:52.547] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance pokerhand
+[INFO] [amlb.print:17:23:52.548] 
+[INFO] [amlb.print:17:23:52.548] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance mnist_784
+[INFO] [amlb.print:17:23:52.548] 
+[INFO] [amlb.print:17:23:52.548] [WARNING] [2021-01-26 17:13:51,841:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance amazon-commerce-reviews
+[INFO] [amlb.print:17:23:52.548] 
+[INFO] [amlb.print:17:23:52.548] [WARNING] [2021-01-26 17:13:51,842:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance umist_faces_cropped
+[INFO] [amlb.print:17:23:52.549] 
+[INFO] [amlb.print:17:23:52.549] [WARNING] [2021-01-26 17:13:51,842:Client-AutoMLSMBO(1791625327)::Australian] Found no best configuration for instance diabetes130us
+[INFO] [amlb.print:17:23:52.549] 
+[INFO] [amlb.print:17:23:52.549] 
+[INFO] [amlb.print:17:23:52.549] 
+[INFO] [amlb.print:17:23:52.550] 
+[INFO] [amlb.results:17:23:52.578] Predictions preview:
+            0         1 predictions truth
+0   0.124082  0.875918           1     1
+1   0.080889  0.919111           1     1
+2   0.922191  0.077809           0     1
+3   0.081664  0.918336           1     1
+4   0.091509  0.908491           1     1
+5   0.084730  0.915270           1     1
+6   0.206164  0.793836           1     1
+7   0.082062  0.917938           1     1
+8   0.082457  0.917543           1     1
+9   0.235072  0.764928           1     1
+10  0.076254  0.923746           1     1
+11  0.074718  0.925282           1     1
+12  0.076032  0.923968           1     1
+13  0.532317  0.467683           0     1
+14  0.097467  0.902533           1     1
+15  0.085309  0.914691           1     1
+16  0.267412  0.732588           1     1
+17  0.188422  0.811578           1     1
+18  0.080529  0.919471           1     1
+19  0.449775  0.550225           1     1
+
+[INFO] [amlb.results:17:23:52.582] Predictions saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/1/predictions.csv`.
+[INFO] [amlb.results:17:23:52.584] Loading metadata from `/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/1/metadata.json`.
+[INFO] [amlb.results:17:23:52.585] Loading predictions from `/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/predictions/Australian/1/predictions.csv`.
+[INFO] [amlb.results:17:23:52.598] Metric scores: { 'acc': 0.8840579710144928,
+  'app_version': 'dev [master, 54881a2]',
+  'auc': 0.9227504244482173,
+  'balacc': 0.8828522920203735,
+  'constraint': 'test',
+  'duration': nan,
+  'fold': 1,
+  'framework': 'autosklearn',
+  'id': 'openml.org/t/146818',
+  'info': None,
+  'logloss': 0.31637986663775486,
+  'metric': 'auc',
+  'mode': 'local',
+  'models_count': 8,
+  'params': '',
+  'predict_duration': 0.35927438735961914,
+  'result': 0.9227504244482173,
+  'seed': 1791625327,
+  'task': 'Australian',
+  'training_duration': 610.3082573413849,
+  'utc': '2021-01-26T17:23:52',
+  'version': '0.12.1'}
+[INFO] [amlb.job:17:23:52.600] Job local.small2.test.Australian.1.autosklearn executed in 613.514 seconds.
+[INFO] [amlb.job:17:23:52.601] All jobs executed in 1224.956 seconds.
+[INFO] [amlb.utils.process:17:23:52.602] [402581] CPU Utilization: 10.9%
+[INFO] [amlb.utils.process:17:23:52.602] [402581] Memory Usage: 11.3%
+[INFO] [amlb.utils.process:17:23:52.602] [402581] Disk Usage: 53.7%
+[INFO] [amlb.benchmark:17:23:52.603] Processing results for autosklearn.small2.test.local.20210126T170327
+[INFO] [amlb.results:17:23:52.626] Scores saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/scores/autosklearn.benchmark_small2.csv`.
+[INFO] [amlb.results:17:23:52.654] Scores saved to `/home/administrator/nil/automlbenchmark/results/autosklearn.small2.test.local.20210126T170327/scores/results.csv`.
+[INFO] [amlb.results:17:23:52.713] Scores saved to `/home/administrator/nil/automlbenchmark/results/results.csv`.
+[INFO] [amlb.benchmark:17:23:52.723] Summing up scores for current run:
+                    id        task    framework constraint fold    result metric   mode version params            app_version                  utc  duration  training_duration  predict_duration models_count        seed       acc       auc    balacc   logloss
+0  openml.org/t/146818  Australian  autosklearn       test    0  0.949915    auc  local  0.12.1         dev [master, 54881a2]  2021-01-26T17:13:39     611.4              608.2               0.2            9  1791625326  0.898551  0.949915  0.896010  0.306119
+1  openml.org/t/146818  Australian  autosklearn       test    1  0.922750    auc  local  0.12.1         dev [master, 54881a2]  2021-01-26T17:23:52     613.5              610.3               0.4            8  1791625327  0.884058  0.922750  0.882852  0.316380

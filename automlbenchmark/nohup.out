@@ -1,0 +1,14 @@
+Running `autosklearn` on `large` benchmarks in `local` mode.
+Loading frameworks definitions from /home/administrator/nil/automlbenchmark/resources/frameworks.yaml.
+Loading benchmark constraint definitions from /home/administrator/nil/automlbenchmark/resources/constraints.yaml.
+Loading benchmark definitions from /home/administrator/nil/automlbenchmark/resources/benchmarks/large.yaml.
+
+------------------------------------------------------
+Starting job local.large.1h12c.Airlines.0.autosklearn.
+[404660] CPU Utilization: 15.2%
+[404660] Memory Usage: 6.3%
+[404660] Disk Usage: 53.7%
+[404660] CPU Utilization: 3.7%
+[404660] Memory Usage: 6.3%
+[404660] Disk Usage: 53.7%
+Processing results for autosklearn.large.1h12c.local.20210126T174458

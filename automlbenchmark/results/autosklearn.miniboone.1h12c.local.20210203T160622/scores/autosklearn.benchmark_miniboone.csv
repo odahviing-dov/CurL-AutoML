@@ -1,0 +1,6 @@
+id,task,framework,constraint,fold,result,metric,mode,version,params,app_version,utc,duration,training_duration,predict_duration,models_count,seed,info,acc,auc,balacc,logloss
+openml.org/t/168335,MiniBooNE,autosklearn,1h12c,0,0.985365,auc,local,0.12.1,,"dev [master, 54881a2]",2021-02-03T17:07:30,3668.6,3612.0,20.3,10,125590417,,0.943415,0.985365,0.936274,0.139939
+openml.org/t/168335,MiniBooNE,autosklearn,1h12c,1,0.986703,auc,local,0.12.1,,"dev [master, 54881a2]",2021-02-03T18:08:59,3688.5,3615.3,29.4,10,125590418,,0.948105,0.986703,0.940453,0.132034
+openml.org/t/168335,MiniBooNE,autosklearn,1h12c,2,0.986609,auc,local,0.12.1,,"dev [master, 54881a2]",2021-02-03T19:10:32,3692.6,3622.9,27.6,11,125590419,,0.946875,0.986609,0.941603,0.137067
+openml.org/t/168335,MiniBooNE,autosklearn,1h12c,3,0.987156,auc,local,0.12.1,,"dev [master, 54881a2]",2021-02-03T20:12:42,3730.9,3618.0,49.0,9,125590420,,0.948797,0.987156,0.945279,0.132361
+openml.org/t/168335,MiniBooNE,autosklearn,1h12c,4,0.987481,auc,local,0.12.1,,"dev [master, 54881a2]",2021-02-03T21:13:54,3671.7,3610.7,22.8,11,125590421,,0.948639,0.987481,0.941402,0.126968

@@ -1,0 +1,30 @@
+---
+# a selection of tasks used to validate the benchmark app: various sizes, format (with/out nans, missing values...)
+
+- name: bioresponse
+  openml_task_id: 9910
+
+- name: dresses-sales
+  openml_task_id: 125920
+
+- name: eucalyptus
+  openml_task_id: 2079
+
+- name: internet-advertisements
+  openml_task_id: 167125
+
+- name: micro-mass
+  openml_task_id: 9950
+
+# kc1 target classes are (true, false).
+# This causes issues if the framework is using Pandas when obtaining predictions:
+#   pandas will automatically convert ("true", "false") strings to (True, False) booleans which will then be reconverted to ("True", "False") when saved to csv.
+# for those cases, Pandas should be avoided at that particular time or string type/conversion should be enforced for target predictions column.
+# cf. H2OAutoML where pandas could be avoided when reading predictions.
+- name: kc1
+  openml_task_id: 3917
+
+# APSFailure doesn't have its target as last column by default.
+# cf. AutoWEKA for an example to handle this case if the framework requires the target in a specific position.
+- name: APSFailure
+  openml_task_id: 168868

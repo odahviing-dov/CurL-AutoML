@@ -1,0 +1,25 @@
+---
+
+# add miniboone to validation set: it has target at index 0 contrary to others
+- name: miniboone
+  openml_task_id: 168335
+
+- name: albert
+  openml_task_id: -1  # need to create an openml task for this dataset first or support raw datasets
+  openml_data_id: 41147
+  enabled: false
+
+- name: bioresponse 
+  openml_task_id: 14966
+
+- name: satellite
+  openml_task_id: 167211
+
+- name: dionis
+  openml_task_id: -1  # need to create an openml task for this dataset first or support raw datasets
+  openml_data_id: 41167
+  enabled: false
+
+- name: fashion-mnist 
+  openml_task_id: 146825
+

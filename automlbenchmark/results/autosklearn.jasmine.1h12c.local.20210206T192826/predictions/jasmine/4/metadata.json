@@ -1,0 +1,28 @@
+{
+    "framework": "autosklearn",
+    "framework_params": {},
+    "framework_version": "stable",
+    "type": "classification",
+    "name": "jasmine",
+    "fold": 4,
+    "metrics": [
+        "auc",
+        "logloss",
+        "acc",
+        "balacc"
+    ],
+    "metric": "auc",
+    "seed": 1480145028,
+    "max_runtime_seconds": 3600,
+    "cores": 12,
+    "max_mem_size_mb": 58232,
+    "min_vol_size_mb": 16384,
+    "input_dir": "/home/administrator/.openml/cache",
+    "output_dir": "/home/administrator/nil/automlbenchmark/results/autosklearn.jasmine.1h12c.local.20210206T192826",
+    "output_predictions_file": "/home/administrator/nil/automlbenchmark/results/autosklearn.jasmine.1h12c.local.20210206T192826/predictions/jasmine/4/predictions.csv",
+    "ext": {},
+    "output_metadata_file": "/home/administrator/nil/automlbenchmark/results/autosklearn.jasmine.1h12c.local.20210206T192826/predictions/jasmine/4/metadata.json",
+    "result_dir": "/tmp/tmptsy9pwl1",
+    "result_file": "/tmp/tmptsy9pwl1/tmp28iixcgq",
+    "version": "0.12.1"
+}

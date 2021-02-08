@@ -1,0 +1,22 @@
+[INFO] [amlb:17:44:58.830] Running `autosklearn` on `large` benchmarks in `local` mode.
+[INFO] [amlb.frameworks.definitions:17:44:58.917] Loading frameworks definitions from /home/administrator/nil/automlbenchmark/resources/frameworks.yaml.
+[INFO] [amlb.resources:17:44:59.042] Loading benchmark constraint definitions from /home/administrator/nil/automlbenchmark/resources/constraints.yaml.
+[INFO] [amlb.benchmarks.file:17:44:59.048] Loading benchmark definitions from /home/administrator/nil/automlbenchmark/resources/benchmarks/large.yaml.
+[INFO] [amlb.job:17:44:59.055] 
+------------------------------------------------------
+Starting job local.large.1h12c.Airlines.0.autosklearn.
+[INFO] [amlb.utils.process:17:44:59.055] [404660] CPU Utilization: 15.2%
+[INFO] [amlb.utils.process:17:44:59.056] [404660] Memory Usage: 6.3%
+[INFO] [amlb.utils.process:17:44:59.057] [404660] Disk Usage: 53.7%
+[INFO] [root:17:44:59.057] Starting [get] request for the URL https://www.openml.org/api/v1/xml/data/1169
+[INFO] [root:17:44:59.978] 0.9207082s taken for [get] request for the URL https://www.openml.org/api/v1/xml/data/1169
+[INFO] [root:17:44:59.979] Starting [get] request for the URL https://www.openml.org/api/v1/xml/data/features/1169
+[INFO] [root:17:45:05.360] 5.3813500s taken for [get] request for the URL https://www.openml.org/api/v1/xml/data/features/1169
+[INFO] [root:17:45:05.366] Starting [get] request for the URL https://www.openml.org/api/v1/xml/data/qualities/1169
+[INFO] [root:17:45:05.961] 0.5956149s taken for [get] request for the URL https://www.openml.org/api/v1/xml/data/qualities/1169
+[INFO] [root:17:45:05.964] Starting [get] request for the URL https://www.openml.org/data/v1/download/66526/airlines.arff
+[INFO] [root:17:45:09.317] 3.3527858s taken for [get] request for the URL https://www.openml.org/data/v1/download/66526/airlines.arff
+[INFO] [amlb.utils.process:17:45:16.804] [404660] CPU Utilization: 3.7%
+[INFO] [amlb.utils.process:17:45:16.805] [404660] Memory Usage: 6.3%
+[INFO] [amlb.utils.process:17:45:16.806] [404660] Disk Usage: 53.7%
+[INFO] [amlb.benchmark:17:45:16.806] Processing results for autosklearn.large.1h12c.local.20210126T174458

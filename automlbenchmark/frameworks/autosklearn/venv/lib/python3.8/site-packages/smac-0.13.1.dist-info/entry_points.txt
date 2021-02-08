@@ -1,0 +1,3 @@
+[console_scripts]
+smac = smac.smac_cli:cmd_line_call
+

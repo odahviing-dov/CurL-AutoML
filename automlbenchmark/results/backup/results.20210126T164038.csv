@@ -1,0 +1,9 @@
+id,task,framework,constraint,fold,result,metric,mode,version,params,app_version,utc,duration,training_duration,predict_duration,models_count,seed,info,acc,auc,balacc,logloss,mae,r2,rmse
+openml.org/t/3913,kc2,autosklearn,test,0,0.857143,auc,local,0.12.1,,"dev [master, 54881a2]",2021-01-20T19:40:53,102.2,59.5,0.0,1,441784381,,0.830189,0.857143,0.725108,1.31717,,,
+openml.org/t/3913,kc2,autosklearn,test,1,0.875541,auc,local,0.12.1,,"dev [master, 54881a2]",2021-01-20T19:42:00,67.0,64.4,0.1,6,441784382,,0.811321,0.875541,0.679654,0.398651,,,
+openml.org/t/59,iris,autosklearn,test,0,0.0673524,logloss,local,0.12.1,,"dev [master, 54881a2]",2021-01-20T19:43:04,63.2,60.6,0.2,4,441784381,,0.933333,,0.933333,0.0673524,,,
+openml.org/t/59,iris,autosklearn,test,1,0.060595,logloss,local,0.12.1,,"dev [master, 54881a2]",2021-01-20T19:44:04,60.0,57.7,0.0,1,441784382,,1.0,,1.0,0.060595,,,
+openml.org/t/2295,cholesterol,autosklearn,test,0,44.1085,rmse,local,0.12.1,,"dev [master, 54881a2]",2021-01-20T19:45:07,63.2,61.0,0.0,1,441784381,,,,,,33.9883,-0.00426799,44.1085
+openml.org/t/2295,cholesterol,autosklearn,test,1,55.1916,rmse,local,0.12.1,,"dev [master, 54881a2]",2021-01-20T19:46:09,62.0,59.8,0.0,1,441784382,,,,,,45.0638,-0.0562957,55.1916
+openml.org/t/146818,Australian,autosklearn,test,0,0.963497,auc,local,0.12.1,,"dev [master, 54881a2]",2021-01-26T16:30:24,606.6,603.1,0.4,12,1631664699,,0.898551,0.963497,0.89601,0.476136,,,
+openml.org/t/146818,Australian,autosklearn,test,1,0.89983,auc,local,0.12.1,,"dev [master, 54881a2]",2021-01-26T16:40:38,613.6,609.3,0.8,16,1631664700,,0.898551,0.89983,0.89601,0.347542,,,
